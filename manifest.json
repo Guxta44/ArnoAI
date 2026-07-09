@@ -1,0 +1,15 @@
+{
+  "name": "Arno AI",
+  "short_name": "Arno AI",
+  "start_url": "/ArnoAI/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#39FF88",
+  "icons": [
+    {
+      "src": "icone.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
