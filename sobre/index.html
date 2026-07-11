@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sobre - Arno AI</title>
+  <meta name="description" content="Conheça a história por trás do Arno AI: um projeto criado para levar treinos personalizados e gratuitos, com Inteligência Artificial, a quem não pode pagar uma academia.">
+  <meta name="keywords" content="sobre, arno ai, história, treino gratuito, academia, fitness, IA, inteligência artificial, personal trainer, musculação">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://guxta44.github.io/ArnoAI/sobre/">
+
+  <meta name="theme-color" content="#39FF88">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sobre - Arno AI">
+  <meta property="og:description" content="Conheça a história por trás do Arno AI, um projeto criado para tornar o treino personalizado acessível a todos.">
+  <meta property="og:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+  <meta property="og:url" content="https://guxta44.github.io/ArnoAI/sobre/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sobre - Arno AI">
+  <meta name="twitter:description" content="Conheça a história por trás do Arno AI, um projeto criado para tornar o treino personalizado acessível a todos.">
+  <meta name="twitter:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Reutiliza a folha de estilos principal do site (nenhuma regra existente é alterada) -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="../icone.png">
+  <link rel="apple-touch-icon" href="../icone.png">
+  <link rel="manifest" href="../manifest.json">
+
+  <style>
+    /*
+      Estilos exclusivos da página Sobre.
+      Mesmo padrão das páginas de Política e Termos: reaproveita ao
+      máximo as classes já existentes no styles.css (.feature-card,
+      .steps-grid, .workouts-grid, .data-item, .cta-box, .stat-*)
+      e cria apenas o mínimo de classes novas, prefixadas com "about-".
+    */
+
+    /* ---------- Hero ---------- */
+    .about-hero {
+      position: relative;
+      padding: 7rem 0 3rem;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .about-hero { padding: 8.5rem 0 4rem; }
+    }
+
+    .about-hero .hero-blob-1 { top: -6rem; left: 10%; }
+    .about-hero .hero-blob-2 { bottom: -8rem; right: 10%; }
+
+    .about-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+
+    @media (min-width: 640px) {
+      .about-title { font-size: 2.75rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .about-title { font-size: 3.25rem; }
+    }
+
+    .about-subtitle {
+      max-width: 40rem;
+      margin: 1.25rem auto 0;
+      font-size: 1.0625rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    /* ---------- Status de plataforma (reaproveita .workout-card) ---------- */
+    .about-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.375rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+    }
+
+    .about-status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .about-status-live {
+      color: var(--primary);
+      background-color: rgba(22, 163, 74, 0.1);
+      border: 1px solid rgba(22, 163, 74, 0.3);
+    }
+
+    .about-status-live .about-status-dot { background-color: var(--primary); }
+
+    .about-status-progress {
+      color: var(--muted-foreground);
+      background-color: rgba(38, 38, 38, 0.6);
+      border: 1px solid var(--border);
+    }
+
+    .about-status-progress .about-status-dot { background-color: var(--muted-foreground); }
+
+    /* ---------- Reveal on scroll (mesmo padrão das outras páginas) ---------- */
+    .about-reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .about-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .about-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* ---------- Rodapé: link ativo e desabilitado ---------- */
+    .footer-link[aria-disabled="true"] {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    .footer-link[aria-current="page"] {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ---------- Botão voltar ao topo (mesmo padrão das outras páginas) ---------- */
+    .about-back-to-top {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: var(--foreground);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+    }
+
+    .about-back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .about-back-to-top:hover {
+      border-color: rgba(22, 163, 74, 0.5);
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <a href="../index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <a href="../index.html#recursos" class="nav-link">Recursos</a>
+        <a href="../index.html#treinos" class="nav-link">Treinos</a>
+        <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="../index.html" class="btn btn-outline" style="text-decoration: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"/>
+            <path d="M19 12H5"/>
+          </svg>
+          Voltar
+        </a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/>
+          <line x1="4" x2="20" y1="6" y2="6"/>
+          <line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+        <svg class="close-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="nav-mobile hidden" id="mobileMenu" aria-label="Navegação mobile">
+      <a href="../index.html#recursos" class="nav-link">Recursos</a>
+      <a href="../index.html#treinos" class="nav-link">Treinos</a>
+      <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+      <a href="../index.html" class="btn btn-primary btn-full" style="text-decoration: none;">Voltar ao Início</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="about-hero">
+      <div class="hero-bg">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+      </div>
+
+      <div class="container">
+        <div class="badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-4.35-9.5-9C.7 8.5 2.5 5 6 5c2 0 3.5 1.2 4 2 .5-.8 2-2 4-2 3.5 0 5.3 3.5 3.5 7-2.5 4.65-9.5 9-9.5 9z"/>
+          </svg>
+          <span>Nossa História</span>
+        </div>
+
+        <h1 class="about-title">Sobre o Arno AI</h1>
+
+        <p class="about-subtitle">
+          Um projeto criado para que treinar de forma segura e personalizada não dependa
+          de quanto você pode pagar por uma academia.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== A HISTÓRIA ===================== -->
+    <section id="historia" class="section section-border" aria-labelledby="historia-heading">
+      <div class="container">
+        <div class="data-grid">
+          <div class="data-content about-reveal">
+            <h2 id="historia-heading" class="section-title text-left">
+              Um sonho de <span class="text-primary">adolescente</span>
+            </h2>
+            <p class="data-description">
+              O Arno AI nasceu da ideia de um adolescente de 13 anos que sonha em se tornar
+              engenheiro de software. Em vez de esperar o futuro chegar, ele decidiu começar a
+              construí-lo agora — criando uma plataforma que usa Inteligência Artificial para
+              gerar treinos personalizados de forma 100% gratuita.
+            </p>
+            <p class="data-description">
+              A ideia surgiu de um problema muito real: nem todo mundo tem condições de pagar
+              uma academia, mas todo mundo merece a chance de treinar com segurança e
+              orientação de qualidade.
+            </p>
+
+            <div class="data-items">
+              <div class="data-item">
+                <div class="data-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21s-7-4.35-9.5-9C.7 8.5 2.5 5 6 5c2 0 3.5 1.2 4 2 .5-.8 2-2 4-2 3.5 0 5.3 3.5 3.5 7-2.5 4.65-9.5 9-9.5 9z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="data-item-title">13 anos</div>
+                  <div class="data-item-text">Idade do criador, movido pelo sonho de ser engenheiro de software</div>
+                </div>
+              </div>
+
+              <div class="data-item">
+                <div class="data-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="data-item-title">100% Gratuito</div>
+                  <div class="data-item-text">Pensado para quem não tem condições de pagar uma academia</div>
+                </div>
+              </div>
+
+              <div class="data-item">
+                <div class="data-item-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 2v2"/><path d="M15 2v2"/><path d="M9 20v2"/><path d="M15 20v2"/><path d="M20 9h2"/><path d="M20 14h2"/><path d="M2 9h2"/><path d="M2 14h2"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="data-item-title">Inteligência Artificial</div>
+                  <div class="data-item-text">Tecnologia usada para personalizar e adaptar cada treino</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="preview-card about-reveal">
+            <div class="preview-header">
+              <div class="preview-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-4.35-9.5-9C.7 8.5 2.5 5 6 5c2 0 3.5 1.2 4 2 .5-.8 2-2 4-2 3.5 0 5.3 3.5 3.5 7-2.5 4.65-9.5 9-9.5 9z"/>
+                </svg>
+              </div>
+              <h3 class="preview-title">Nossa Missão</h3>
+              <p class="preview-subtitle">O que move o Arno AI todos os dias</p>
+            </div>
+
+            <div class="exercise-list">
+              <div class="exercise-item">
+                <span class="exercise-name">Acesso democrático ao treino</span>
+              </div>
+              <div class="exercise-item">
+                <span class="exercise-name">Segurança acima de tudo</span>
+              </div>
+              <div class="exercise-item">
+                <span class="exercise-name">Personalização real, para cada corpo</span>
+              </div>
+              <div class="exercise-item">
+                <span class="exercise-name">Evolução constante do projeto</span>
+              </div>
+            </div>
+
+            <p class="preview-note">Um projeto que cresce a cada nova versão, com o mesmo propósito desde o início.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMO FUNCIONA ===================== -->
+    <section id="como-funciona-app" class="section section-dark" aria-labelledby="como-funciona-heading">
+      <div class="container">
+        <div class="section-header about-reveal">
+          <h2 id="como-funciona-heading" class="section-title">
+            Como o Arno AI <span class="text-primary">funciona na prática</span>
+          </h2>
+          <p class="section-description">
+            Do cadastro ao treino pronto, tudo pensado para ser simples e seguro.
+          </p>
+        </div>
+
+        <div class="steps-grid about-reveal">
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Crie sua conta</h3>
+            <p class="step-description">Cadastro simples com nome, e-mail e senha.</p>
+            <svg class="step-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Conte seus dados</h3>
+            <p class="step-description">Idade, altura e peso — o app calcula seu IMC automaticamente.</p>
+            <svg class="step-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Defina sua rotina</h3>
+            <p class="step-description">Dias por semana, carga máxima, duração e grupo muscular.</p>
+            <svg class="step-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </div>
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Envie uma foto (opcional)</h3>
+            <p class="step-description">A IA analisa seu corpo e adapta os exercícios com mais precisão.</p>
+            <svg class="step-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </div>
+          <div class="step">
+            <div class="step-number">05</div>
+            <h3 class="step-title">Escolha o ambiente</h3>
+            <p class="step-description">Treine em casa ou na academia, como preferir.</p>
+            <svg class="step-arrow" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </div>
+          <div class="step">
+            <div class="step-number">06</div>
+            <h3 class="step-title">Receba seu treino</h3>
+            <p class="step-description">Cada exercício vem com vídeo tutorial legendado e dublado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RECURSOS QUE PROTEGEM E ACOMPANHAM VOCÊ ===================== -->
+    <section id="recursos-sobre" class="section section-border" aria-labelledby="recursos-sobre-heading">
+      <div class="container">
+        <div class="section-header about-reveal">
+          <h2 id="recursos-sobre-heading" class="section-title">
+            Pensado para treinar com
+            <span class="text-primary"> segurança e evoluir sempre</span>
+          </h2>
+          <p class="section-description">
+            Recursos que tornam a experiência mais completa, do primeiro treino ao centésimo.
+          </p>
+        </div>
+
+        <div class="features-grid about-reveal">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 13c0 5-3.5 7.5-7.5 9-.5.17-1 .17-1.5 0C7 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.79 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Adaptação para todos os corpos</h3>
+            <p class="feature-description">Em casos de obesidade em nível mais alto, os exercícios são adaptados para proteger as articulações e reduzir o risco de lesões.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Análise corporal por foto</h3>
+            <p class="feature-description">Se preferir, envie uma foto em pé para a IA analisar seu corpo e tornar o treino ainda mais viável para você.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33Z"/><path d="m9.75 15.02 5.75-3.27-5.75-3.27z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Vídeos tutoriais integrados</h3>
+            <p class="feature-description">Cada exercício vem com um link do YouTube, legendado e dublado automaticamente, mostrando a execução correta.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5z"/><path d="M14 2v6h6"/><path d="M9.5 12.5h5"/><path d="M9.5 16h5"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Exportação em PDF</h3>
+            <p class="feature-description">Salve seu treino em PDF e leve com você para qualquer lugar, mesmo sem internet.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Histórico completo</h3>
+            <p class="feature-description">Acompanhe todos os treinos já realizados e veja sua evolução ao longo do tempo.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Perfil e ofensiva</h3>
+            <p class="feature-description">Veja seu perfil, sua sequência de dias treinados e qual grupo muscular é o seu favorito.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DISPONÍVEL EM ===================== -->
+    <section id="plataformas" class="section section-dark" aria-labelledby="plataformas-heading">
+      <div class="container">
+        <div class="section-header about-reveal">
+          <h2 id="plataformas-heading" class="section-title">
+            Disponível na sua <span class="text-primary">plataforma</span>
+          </h2>
+          <p class="section-description">
+            O Arno AI começou no computador e está se expandindo para chegar até você.
+          </p>
+        </div>
+
+        <div class="workouts-grid about-reveal" style="grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); max-width: 42rem; margin: 0 auto;">
+          <div class="workout-card" style="cursor: default;">
+            <span class="workout-emoji">🖥️</span>
+            <span class="workout-name">Windows</span>
+            <span class="about-status about-status-live"><span class="about-status-dot"></span>Disponível</span>
+          </div>
+          <div class="workout-card" style="cursor: default;">
+            <span class="workout-emoji">🤖</span>
+            <span class="workout-name">Android</span>
+            <span class="about-status about-status-progress"><span class="about-status-dot"></span>Em desenvolvimento</span>
+          </div>
+          <div class="workout-card" style="cursor: default;">
+            <span class="workout-emoji">🍎</span>
+            <span class="workout-name">iPhone</span>
+            <span class="about-status about-status-progress"><span class="about-status-dot"></span>Em breve</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section section-border">
+      <div class="container">
+        <div class="cta-box about-reveal">
+          <div class="cta-bg"></div>
+          <h2 class="cta-title">
+            Faça parte dessa
+            <br>
+            <span class="text-primary">história</span>
+          </h2>
+          <p class="cta-description">
+            Baixe o Arno AI agora e comece a treinar com um plano feito especialmente para você,
+            de graça e com segurança.
+          </p>
+          <a href="https://github.com/Guxta44/ArnoAI/releases/download/v1.0/arno_ai.exe?raw=true" download="arno_ai.exe" class="btn btn-primary btn-lg" style="text-decoration: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" x2="12" y1="15" y2="3"/>
+            </svg>
+            Baixar Aplicativo Grátis
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="../index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </a>
+
+      <p class="footer-copyright">© 2026 Arno AI. Todos os direitos reservados.</p>
+
+      <div class="footer-links">
+        <a href="../index.html" class="footer-link">Página Inicial</a>
+        <a href="../politica/index.html" class="footer-link">Política de Privacidade</a>
+        <a href="../termos/index.html" class="footer-link">Termos de Uso</a>
+        <a href="index.html" class="footer-link" aria-current="page">Sobre</a>
+        <a href="#" class="footer-link" aria-disabled="true" title="Em breve">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="about-back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script>
+    // Menu mobile (mesmo comportamento das demais páginas do site)
+    (function () {
+      var btn = document.getElementById('mobileMenuBtn');
+      var menu = document.getElementById('mobileMenu');
+      if (!btn || !menu) return;
+
+      var menuIcon = btn.querySelector('.menu-icon');
+      var closeIcon = btn.querySelector('.close-icon');
+
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    // Animação leve ao aparecer (fade + slide)
+    (function () {
+      var elements = document.querySelectorAll('.about-reveal');
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      elements.forEach(function (el) { observer.observe(el); });
+    })();
+
+    // Botão flutuante "voltar ao topo"
+    (function () {
+      var backToTop = document.getElementById('backToTop');
+      if (!backToTop) return;
+
+      window.addEventListener('scroll', function () {
+        backToTop.classList.toggle('is-visible', window.scrollY > 500);
+      }, { passive: true });
+
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>
