@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Termos de Uso - Arno AI</title>
+  <meta name="description" content="Conheça as regras de utilização do Arno AI, do site oficial e do aplicativo. Termos de Uso claros e transparentes para você treinar com segurança.">
+  <meta name="keywords" content="termos de uso, arno ai, regras de uso, treino, academia, fitness, IA, inteligência artificial, personal trainer, musculação">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://guxta44.github.io/ArnoAI/termos/">
+
+  <meta name="theme-color" content="#39FF88">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Termos de Uso - Arno AI">
+  <meta property="og:description" content="Conheça as regras que estabelecem a utilização do Arno AI, do site oficial e do aplicativo.">
+  <meta property="og:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+  <meta property="og:url" content="https://guxta44.github.io/ArnoAI/termos/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Termos de Uso - Arno AI">
+  <meta name="twitter:description" content="Conheça as regras que estabelecem a utilização do Arno AI, do site oficial e do aplicativo.">
+  <meta name="twitter:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Reutiliza a folha de estilos principal do site (nenhuma regra existente é alterada) -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="../icone.png">
+  <link rel="apple-touch-icon" href="../icone.png">
+  <link rel="manifest" href="../manifest.json">
+
+  <style>
+    /*
+      Estilos exclusivos da página Termos de Uso.
+      Mesmo padrão da página de Política de Privacidade: reaproveita
+      as variáveis, fontes e espaçamentos do styles.css principal
+      (--background, --card, --primary, --radius, etc.) e adiciona
+      apenas classes novas, prefixadas com "terms-", sem redefinir
+      nenhuma classe global existente.
+    */
+
+    /* ---------- Hero dos Termos (mesmo padrão da Política) ---------- */
+    .terms-hero {
+      position: relative;
+      padding: 7rem 0 3rem;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .terms-hero { padding: 8.5rem 0 4rem; }
+    }
+
+    .terms-hero .hero-blob-1 { top: -6rem; left: 10%; }
+    .terms-hero .hero-blob-2 { bottom: -8rem; right: 10%; }
+
+    .terms-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+
+    @media (min-width: 640px) {
+      .terms-title { font-size: 2.75rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .terms-title { font-size: 3.25rem; }
+    }
+
+    .terms-subtitle {
+      max-width: 40rem;
+      margin: 1.25rem auto 0;
+      font-size: 1.0625rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    .terms-updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.8125rem;
+      color: var(--muted-foreground);
+    }
+
+    .terms-updated svg { color: var(--primary); flex-shrink: 0; }
+
+    /* ---------- Índice ---------- */
+    .terms-toc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .terms-toc-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .terms-toc-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .terms-toc-item {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(51, 51, 51, 0.5);
+      background-color: rgba(26, 26, 26, 0.5);
+      text-decoration: none;
+      color: var(--foreground);
+      transition: all 0.25s ease;
+    }
+
+    .terms-toc-item:hover {
+      border-color: rgba(22, 163, 74, 0.5);
+      background-color: var(--card);
+      transform: translateX(4px);
+    }
+
+    .terms-toc-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      background-color: rgba(22, 163, 74, 0.1);
+      color: var(--primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      transition: all 0.25s ease;
+    }
+
+    .terms-toc-item:hover .terms-toc-number {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .terms-toc-label {
+      font-size: 0.9375rem;
+      font-weight: 500;
+    }
+
+    /* ---------- Cards de conteúdo ---------- */
+    .terms-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .terms-card {
+      scroll-margin-top: 6rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .terms-card {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.5rem;
+      }
+    }
+
+    .terms-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      background-color: rgba(22, 163, 74, 0.1);
+      color: var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .terms-card:hover .terms-card-icon {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .terms-card-body { flex: 1; min-width: 0; }
+
+    .terms-card-title {
+      display: flex;
+      align-items: baseline;
+      gap: 0.625rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .terms-card-index {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .terms-card-body p {
+      color: var(--muted-foreground);
+      line-height: 1.75;
+      margin-bottom: 0.9rem;
+    }
+
+    .terms-card-body p:last-child { margin-bottom: 0; }
+
+    .terms-card-body ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem 1rem;
+      margin: 0.5rem 0 1.1rem;
+    }
+
+    @media (max-width: 480px) {
+      .terms-card-body ul { grid-template-columns: 1fr; }
+    }
+
+    .terms-card-body ul li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--foreground);
+    }
+
+    .terms-card-body ul li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    /* ---------- Card de destaque para IA (seção 06) ---------- */
+    .terms-card-ai {
+      background: linear-gradient(160deg, rgba(22, 163, 74, 0.08) 0%, rgba(26, 26, 26, 0.5) 55%);
+      border-color: rgba(22, 163, 74, 0.35);
+    }
+
+    .terms-card-ai .terms-card-icon {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    /* ---------- Aviso de saúde (seção 07 — destaque de atenção) ---------- */
+    .terms-health-note {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 1.1rem 1.25rem;
+      border-radius: 0.5rem;
+      background-color: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-size: 0.9rem;
+      color: var(--foreground);
+      margin-top: 0.25rem;
+    }
+
+    .terms-health-note svg {
+      color: #f59e0b;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .terms-card-health {
+      border-color: rgba(245, 158, 11, 0.25);
+    }
+
+    .terms-card-health .terms-card-icon {
+      background-color: rgba(245, 158, 11, 0.12);
+      color: #f59e0b;
+    }
+
+    .terms-card-health:hover .terms-card-icon {
+      background-color: #f59e0b;
+      color: var(--card);
+    }
+
+    /* ---------- Card de contato pendente ---------- */
+    .terms-contact-pending {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.1rem;
+      border-radius: 0.5rem;
+      background-color: rgba(38, 38, 38, 0.5);
+      color: var(--muted-foreground);
+      font-size: 0.9rem;
+    }
+
+    /* ---------- Rodapé: links desabilitados e link ativo ---------- */
+    .footer-link[aria-disabled="true"] {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    .footer-link[aria-current="page"] {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ---------- Botão voltar ao topo ---------- */
+    .terms-back-to-top {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: var(--foreground);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+    }
+
+    .terms-back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .terms-back-to-top:hover {
+      border-color: rgba(22, 163, 74, 0.5);
+      color: var(--primary);
+    }
+
+    /* ---------- Animação leve ao aparecer (reveal on scroll) ---------- */
+    .terms-reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .terms-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .terms-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <a href="../index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <a href="../index.html#recursos" class="nav-link">Recursos</a>
+        <a href="../index.html#treinos" class="nav-link">Treinos</a>
+        <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="../index.html" class="btn btn-outline" style="text-decoration: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"/>
+            <path d="M19 12H5"/>
+          </svg>
+          Voltar
+        </a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/>
+          <line x1="4" x2="20" y1="6" y2="6"/>
+          <line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+        <svg class="close-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="nav-mobile hidden" id="mobileMenu" aria-label="Navegação mobile">
+      <a href="../index.html#recursos" class="nav-link">Recursos</a>
+      <a href="../index.html#treinos" class="nav-link">Treinos</a>
+      <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+      <a href="../index.html" class="btn btn-primary btn-full" style="text-decoration: none;">Voltar ao Início</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="terms-hero">
+      <div class="hero-bg">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+      </div>
+
+      <div class="container">
+        <div class="badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/>
+          </svg>
+          <span>Regras claras de utilização</span>
+        </div>
+
+        <h1 class="terms-title">Termos de Uso</h1>
+
+        <p class="terms-subtitle">
+          Estes Termos de Uso estabelecem as regras para utilização do Arno AI, do site oficial e do aplicativo.
+        </p>
+
+        <div class="terms-updated">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>
+          </svg>
+          <span>Última atualização: <strong>11 de julho de 2026</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ÍNDICE ===================== -->
+    <section class="section section-border" style="padding-top: 0;" aria-labelledby="terms-toc-heading">
+      <div class="container">
+        <div class="section-header terms-reveal">
+          <h2 id="terms-toc-heading" class="section-title">Índice <span class="text-primary">de Tópicos</span></h2>
+          <p class="section-description">Navegue diretamente para a seção que deseja consultar.</p>
+        </div>
+
+        <nav class="terms-toc-grid terms-reveal" aria-label="Índice dos Termos de Uso">
+          <a href="#introducao" class="terms-toc-item"><span class="terms-toc-number">01</span><span class="terms-toc-label">Introdução</span></a>
+          <a href="#aceitacao" class="terms-toc-item"><span class="terms-toc-number">02</span><span class="terms-toc-label">Aceitação dos Termos</span></a>
+          <a href="#utilizacao" class="terms-toc-item"><span class="terms-toc-number">03</span><span class="terms-toc-label">Utilização do Arno AI</span></a>
+          <a href="#cadastro" class="terms-toc-item"><span class="terms-toc-number">04</span><span class="terms-toc-label">Cadastro de Conta</span></a>
+          <a href="#responsabilidades" class="terms-toc-item"><span class="terms-toc-number">05</span><span class="terms-toc-label">Responsabilidades do Usuário</span></a>
+          <a href="#inteligencia-artificial" class="terms-toc-item"><span class="terms-toc-number">06</span><span class="terms-toc-label">Inteligência Artificial</span></a>
+          <a href="#saude" class="terms-toc-item"><span class="terms-toc-number">07</span><span class="terms-toc-label">Saúde e Responsabilidade</span></a>
+          <a href="#propriedade-intelectual" class="terms-toc-item"><span class="terms-toc-number">08</span><span class="terms-toc-label">Propriedade Intelectual</span></a>
+          <a href="#limitacao-responsabilidade" class="terms-toc-item"><span class="terms-toc-number">09</span><span class="terms-toc-label">Limitação de Responsabilidade</span></a>
+          <a href="#suspensao" class="terms-toc-item"><span class="terms-toc-number">10</span><span class="terms-toc-label">Suspensão ou Encerramento de Conta</span></a>
+          <a href="#alteracoes" class="terms-toc-item"><span class="terms-toc-number">11</span><span class="terms-toc-label">Alterações dos Termos</span></a>
+          <a href="#contato" class="terms-toc-item"><span class="terms-toc-number">12</span><span class="terms-toc-label">Contato</span></a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===================== CONTEÚDO ===================== -->
+    <section class="section section-dark" aria-label="Conteúdo dos Termos de Uso">
+      <div class="container">
+        <div class="terms-list">
+
+          <!-- 1. Introdução -->
+          <article id="introducao" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">01</span> Introdução</h3>
+              <p>
+                O Arno AI é uma plataforma criada para auxiliar pessoas em seus treinos, oferecendo
+                planos personalizados a partir das informações fornecidas por cada usuário.
+              </p>
+              <p>
+                Para isso, o Arno AI utiliza Inteligência Artificial, que analisa esses dados e gera
+                recomendações de treino adaptadas ao perfil de quem está usando o aplicativo.
+              </p>
+            </div>
+          </article>
+
+          <!-- 2. Aceitação dos Termos -->
+          <article id="aceitacao" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">02</span> Aceitação dos Termos</h3>
+              <p>
+                Ao acessar o site oficial ou utilizar o aplicativo Arno AI, você declara que leu,
+                entendeu e concorda integralmente com estes Termos de Uso.
+              </p>
+              <p>
+                Caso você não concorde com algum ponto aqui descrito, recomendamos que não utilize o
+                Arno AI.
+              </p>
+            </div>
+          </article>
+
+          <!-- 3. Utilização do Arno AI -->
+          <article id="utilizacao" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">03</span> Utilização do Arno AI</h3>
+              <p>
+                Você pode utilizar o sistema livremente para gerar treinos personalizados, dentro da
+                proposta do aplicativo. Ao utilizar o Arno AI, você concorda em <strong>não</strong>:
+              </p>
+              <ul>
+                <li>Utilizar o serviço para fins ilegais</li>
+                <li>Tentar explorar falhas do sistema</li>
+                <li>Copiar o código-fonte</li>
+                <li>Modificar o sistema sem autorização</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 4. Cadastro de Conta -->
+          <article id="cadastro" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="16" x2="22" y1="11" y2="11"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">04</span> Cadastro de Conta</h3>
+              <p>
+                O Arno AI poderá permitir que você crie uma conta para utilizar o aplicativo. Ao fazer
+                isso, você será responsável por:
+              </p>
+              <ul>
+                <li>Seu e-mail cadastrado</li>
+                <li>Sua senha de acesso</li>
+                <li>As informações fornecidas</li>
+              </ul>
+              <p>
+                É sua responsabilidade manter seus dados sempre atualizados e corretos.
+              </p>
+            </div>
+          </article>
+
+          <!-- 5. Responsabilidades do Usuário -->
+          <article id="responsabilidades" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">05</span> Responsabilidades do Usuário</h3>
+              <p>
+                Você é responsável pela veracidade e precisão das informações fornecidas ao Arno AI.
+              </p>
+              <p>
+                Caso os dados informados (idade, altura, peso, objetivo, entre outros) estejam
+                incorretos, os treinos gerados pela Inteligência Artificial também poderão estar
+                incorretos ou inadequados ao seu perfil real.
+              </p>
+            </div>
+          </article>
+
+          <!-- 6. Inteligência Artificial -->
+          <article id="inteligencia-artificial" class="feature-card terms-card terms-card-ai terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 2v2"/><path d="M15 2v2"/><path d="M9 20v2"/><path d="M15 20v2"/><path d="M20 9h2"/><path d="M20 14h2"/><path d="M2 9h2"/><path d="M2 14h2"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">06</span> Inteligência Artificial</h3>
+              <p>
+                Os treinos oferecidos pelo Arno AI são gerados por Inteligência Artificial, com base
+                exclusivamente nas informações que você fornece dentro do aplicativo.
+              </p>
+              <p>
+                É importante entender que a IA <strong>não possui consciência</strong> e, como qualquer
+                sistema automatizado, <strong>pode cometer erros</strong>. As recomendações geradas
+                servem apenas como um auxílio ao seu treino, e não como uma verdade absoluta ou
+                infalível.
+              </p>
+            </div>
+          </article>
+
+          <!-- 7. Saúde e Responsabilidade -->
+          <article id="saude" class="feature-card terms-card terms-card-health terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">07</span> Saúde e Responsabilidade</h3>
+              <p>
+                O Arno AI é uma ferramenta de auxílio a treinos e <strong>não substitui</strong> a
+                orientação de profissionais qualificados, como médico, fisioterapeuta, nutricionista
+                ou educador físico.
+              </p>
+              <div class="terms-health-note">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>
+                </svg>
+                <span>
+                  Antes de iniciar qualquer treino intenso, procure orientação profissional. Caso sinta
+                  dores durante o treino, <strong>interrompa a atividade imediatamente</strong>.
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Propriedade Intelectual -->
+          <article id="propriedade-intelectual" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">08</span> Propriedade Intelectual</h3>
+              <p>
+                O nome Arno AI, sua marca, logotipo, design, código-fonte e todo o conteúdo do site e do
+                aplicativo pertencem ao projeto Arno AI.
+              </p>
+              <p>
+                É proibida a reprodução, cópia ou distribuição de qualquer um desses elementos sem
+                autorização prévia.
+              </p>
+            </div>
+          </article>
+
+          <!-- 9. Limitação de Responsabilidade -->
+          <article id="limitacao-responsabilidade" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">09</span> Limitação de Responsabilidade</h3>
+              <p>O Arno AI não se responsabiliza por:</p>
+              <ul>
+                <li>Lesões durante o treino</li>
+                <li>Uso inadequado do aplicativo</li>
+                <li>Dados incorretos informados pelo usuário</li>
+                <li>Interrupções temporárias do serviço</li>
+                <li>Bugs inesperados no sistema</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 10. Suspensão ou Encerramento de Conta -->
+          <article id="suspensao" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" x2="22" y1="8" y2="13"/><line x1="22" x2="17" y1="8" y2="13"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">10</span> Suspensão ou Encerramento de Conta</h3>
+              <p>
+                Contas poderão ser suspensas ou encerradas caso o usuário utilize o Arno AI para
+                atividades ilícitas ou em desacordo com estes Termos de Uso.
+              </p>
+            </div>
+          </article>
+
+          <!-- 11. Alterações dos Termos -->
+          <article id="alteracoes" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M8 16H3v5"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">11</span> Alterações dos Termos</h3>
+              <p>
+                Estes Termos de Uso poderão ser atualizados futuramente, conforme o Arno AI evolui e
+                novas funcionalidades são adicionadas.
+              </p>
+              <p>
+                A data da última atualização estará sempre visível no topo desta página.
+              </p>
+            </div>
+          </article>
+
+          <!-- 12. Contato -->
+          <article id="contato" class="feature-card terms-card terms-reveal">
+            <div class="terms-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <div class="terms-card-body">
+              <h3 class="terms-card-title"><span class="terms-card-index">12</span> Contato</h3>
+              <p>
+                No momento, o Arno AI ainda não possui um canal oficial de contato disponível.
+              </p>
+              <div class="terms-contact-pending">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+                </svg>
+                <span>Em breve disponibilizaremos um canal oficial de suporte.</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="../index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </a>
+
+      <p class="footer-copyright">© 2026 Arno AI. Todos os direitos reservados.</p>
+
+      <div class="footer-links">
+        <a href="../index.html" class="footer-link">Página Inicial</a>
+        <a href="../politica/index.html" class="footer-link">Política de Privacidade</a>
+        <a href="index.html" class="footer-link" aria-current="page">Termos de Uso</a>
+        <a href="#" class="footer-link" aria-disabled="true" title="Em breve">Sobre</a>
+        <a href="#" class="footer-link" aria-disabled="true" title="Em breve">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="terms-back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script>
+    // Menu mobile (mesmo comportamento das demais páginas do site)
+    (function () {
+      var btn = document.getElementById('mobileMenuBtn');
+      var menu = document.getElementById('mobileMenu');
+      if (!btn || !menu) return;
+
+      var menuIcon = btn.querySelector('.menu-icon');
+      var closeIcon = btn.querySelector('.close-icon');
+
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    // Animação leve ao aparecer (fade + slide) para índice e cards de conteúdo
+    (function () {
+      var elements = document.querySelectorAll('.terms-reveal');
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      elements.forEach(function (el) { observer.observe(el); });
+    })();
+
+    // Botão flutuante "voltar ao topo"
+    (function () {
+      var backToTop = document.getElementById('backToTop');
+      if (!backToTop) return;
+
+      window.addEventListener('scroll', function () {
+        backToTop.classList.toggle('is-visible', window.scrollY > 500);
+      }, { passive: true });
+
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>
