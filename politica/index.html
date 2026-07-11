@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Política de Privacidade - Arno AI</title>
+  <meta name="description" content="Saiba como o Arno AI coleta, utiliza e protege seus dados. Transparência total sobre privacidade no seu personal trainer com inteligência artificial.">
+  <meta name="keywords" content="política de privacidade, arno ai, privacidade, dados pessoais, treino, academia, fitness, IA, inteligência artificial, personal trainer, musculação">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://guxta44.github.io/ArnoAI/politica/">
+
+  <meta name="theme-color" content="#39FF88">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Política de Privacidade - Arno AI">
+  <meta property="og:description" content="Saiba como coletamos, utilizamos e protegemos seus dados no Arno AI.">
+  <meta property="og:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+  <meta property="og:url" content="https://guxta44.github.io/ArnoAI/politica/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Política de Privacidade - Arno AI">
+  <meta name="twitter:description" content="Saiba como coletamos, utilizamos e protegemos seus dados no Arno AI.">
+  <meta name="twitter:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Reutiliza a folha de estilos principal do site (nenhuma regra existente é alterada) -->
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="../icone.png">
+  <link rel="apple-touch-icon" href="../icone.png">
+  <link rel="manifest" href="../manifest.json">
+
+  <style>
+    /*
+      Estilos exclusivos da página Política de Privacidade.
+      Tudo aqui usa as mesmas variáveis, fontes e paddings do style.css
+      principal (--background, --card, --primary, --radius, etc.).
+      Nenhuma classe global do site é redefinida — apenas novas
+      classes prefixadas com "policy-" são criadas.
+    */
+
+    /* ---------- Hero da política (versão compacta do .hero) ---------- */
+    .policy-hero {
+      position: relative;
+      padding: 7rem 0 3rem;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .policy-hero { padding: 8.5rem 0 4rem; }
+    }
+
+    .policy-hero .hero-blob-1 { top: -6rem; left: 10%; }
+    .policy-hero .hero-blob-2 { bottom: -8rem; right: 10%; }
+
+    .policy-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+
+    @media (min-width: 640px) {
+      .policy-title { font-size: 2.75rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .policy-title { font-size: 3.25rem; }
+    }
+
+    .policy-subtitle {
+      max-width: 38rem;
+      margin: 1.25rem auto 0;
+      font-size: 1.0625rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    .policy-updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.8125rem;
+      color: var(--muted-foreground);
+    }
+
+    .policy-updated svg { color: var(--primary); flex-shrink: 0; }
+
+    .policy-hero-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    /* ---------- Índice ---------- */
+    .policy-toc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .policy-toc-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .policy-toc-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .policy-toc-item {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(51, 51, 51, 0.5);
+      background-color: rgba(26, 26, 26, 0.5);
+      text-decoration: none;
+      color: var(--foreground);
+      transition: all 0.25s ease;
+    }
+
+    .policy-toc-item:hover {
+      border-color: rgba(22, 163, 74, 0.5);
+      background-color: var(--card);
+      transform: translateX(4px);
+    }
+
+    .policy-toc-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      background-color: rgba(22, 163, 74, 0.1);
+      color: var(--primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      transition: all 0.25s ease;
+    }
+
+    .policy-toc-item:hover .policy-toc-number {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .policy-toc-label {
+      font-size: 0.9375rem;
+      font-weight: 500;
+    }
+
+    /* ---------- Cards de conteúdo ---------- */
+    .policy-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .policy-card {
+      scroll-margin-top: 6rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .policy-card {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.5rem;
+      }
+    }
+
+    .policy-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      background-color: rgba(22, 163, 74, 0.1);
+      color: var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .policy-card:hover .policy-card-icon {
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .policy-card-body { flex: 1; min-width: 0; }
+
+    .policy-card-title {
+      display: flex;
+      align-items: baseline;
+      gap: 0.625rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .policy-card-index {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .policy-card-body p {
+      color: var(--muted-foreground);
+      line-height: 1.75;
+      margin-bottom: 0.9rem;
+    }
+
+    .policy-card-body p:last-child { margin-bottom: 0; }
+
+    .policy-card-body ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem 1rem;
+      margin: 0.5rem 0 1.1rem;
+    }
+
+    @media (max-width: 480px) {
+      .policy-card-body ul { grid-template-columns: 1fr; }
+    }
+
+    .policy-card-body ul li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--foreground);
+    }
+
+    .policy-card-body ul li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .policy-note {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 1rem 1.1rem;
+      border-radius: 0.5rem;
+      background-color: rgba(22, 163, 74, 0.08);
+      border: 1px solid rgba(22, 163, 74, 0.2);
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin-top: 0.25rem;
+    }
+
+    .policy-note svg { color: var(--primary); flex-shrink: 0; margin-top: 0.15rem; }
+
+    .policy-badge-future {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15rem 0.55rem;
+      border-radius: 9999px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--muted-foreground);
+      border: 1px solid var(--border);
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* ---------- Contato: card sem canal disponível ainda ---------- */
+    .policy-contact-pending {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.1rem;
+      border-radius: 0.5rem;
+      background-color: rgba(38, 38, 38, 0.5);
+      color: var(--muted-foreground);
+      font-size: 0.9rem;
+    }
+
+    /* ---------- Rodapé: links "futuros" desabilitados ---------- */
+    .footer-link[aria-disabled="true"] {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    /* ---------- Botão voltar ao topo ---------- */
+    .policy-back-to-top {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: var(--foreground);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+    }
+
+    .policy-back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .policy-back-to-top:hover {
+      border-color: rgba(22, 163, 74, 0.5);
+      color: var(--primary);
+    }
+
+    /* ---------- Animação leve ao aparecer (reveal on scroll) ---------- */
+    .policy-reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .policy-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .policy-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <a href="../index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="../index.html#recursos" class="nav-link">Recursos</a>
+        <a href="../index.html#treinos" class="nav-link">Treinos</a>
+        <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="../index.html" class="btn btn-outline" style="text-decoration: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"/>
+            <path d="M19 12H5"/>
+          </svg>
+          Voltar
+        </a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/>
+          <line x1="4" x2="20" y1="6" y2="6"/>
+          <line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+        <svg class="close-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="nav-mobile hidden" id="mobileMenu">
+      <a href="../index.html#recursos" class="nav-link">Recursos</a>
+      <a href="../index.html#treinos" class="nav-link">Treinos</a>
+      <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+      <a href="../index.html" class="btn btn-primary btn-full" style="text-decoration: none;">Voltar ao Início</a>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="policy-hero">
+    <div class="hero-bg">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+    </div>
+
+    <div class="container">
+      <div class="badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 13c0 5-3.5 7.5-7.5 9-.5.17-1 .17-1.5 0C7 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.79 17 5 19 5a1 1 0 0 1 1 1z"/>
+        </svg>
+        <span>Sua privacidade em primeiro lugar</span>
+      </div>
+
+      <h1 class="policy-title">Política de Privacidade</h1>
+
+      <p class="policy-subtitle">
+        Saiba como coletamos, utilizamos e protegemos seus dados.
+      </p>
+
+      <div class="policy-updated">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>
+        </svg>
+        <span>Última atualização: <strong>11 de julho de 2026</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ÍNDICE ===================== -->
+  <section class="section section-border" style="padding-top: 0;">
+    <div class="container">
+      <div class="section-header policy-reveal">
+        <h2 class="section-title">Índice <span class="text-primary">de Tópicos</span></h2>
+        <p class="section-description">Navegue diretamente para a seção que deseja consultar.</p>
+      </div>
+
+      <nav class="policy-toc-grid policy-reveal" aria-label="Índice da política de privacidade">
+        <a href="#introducao" class="policy-toc-item"><span class="policy-toc-number">01</span><span class="policy-toc-label">Introdução</span></a>
+        <a href="#dados-coletados" class="policy-toc-item"><span class="policy-toc-number">02</span><span class="policy-toc-label">Dados coletados</span></a>
+        <a href="#como-utilizamos" class="policy-toc-item"><span class="policy-toc-number">03</span><span class="policy-toc-label">Como utilizamos seus dados</span></a>
+        <a href="#armazenamento" class="policy-toc-item"><span class="policy-toc-number">04</span><span class="policy-toc-label">Armazenamento</span></a>
+        <a href="#seguranca" class="policy-toc-item"><span class="policy-toc-number">05</span><span class="policy-toc-label">Segurança</span></a>
+        <a href="#camera" class="policy-toc-item"><span class="policy-toc-number">06</span><span class="policy-toc-label">Uso da câmera</span></a>
+        <a href="#cookies" class="policy-toc-item"><span class="policy-toc-number">07</span><span class="policy-toc-label">Cookies</span></a>
+        <a href="#direitos" class="policy-toc-item"><span class="policy-toc-number">08</span><span class="policy-toc-label">Direitos do usuário</span></a>
+        <a href="#alteracoes" class="policy-toc-item"><span class="policy-toc-number">09</span><span class="policy-toc-label">Alterações nesta política</span></a>
+        <a href="#contato" class="policy-toc-item"><span class="policy-toc-number">10</span><span class="policy-toc-label">Contato</span></a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ===================== CONTEÚDO ===================== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="policy-list">
+
+        <!-- 1. Introdução -->
+        <article id="introducao" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">01</span> Introdução</h3>
+            <p>
+              O Arno AI respeita profundamente a privacidade de cada pessoa que utiliza o aplicativo.
+              Esta política explica, de forma clara e transparente, quais informações podem ser
+              coletadas e como elas são tratadas.
+            </p>
+            <p>
+              Nosso objetivo é oferecer uma experiência de treino personalizada, segura e confiável,
+              utilizando apenas os dados necessários para gerar o melhor plano possível para você.
+            </p>
+          </div>
+        </article>
+
+        <!-- 2. Dados coletados -->
+        <article id="dados-coletados" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">02</span> Dados coletados</h3>
+            <p>Para gerar treinos personalizados, o aplicativo pode coletar as seguintes informações:</p>
+            <ul>
+              <li>Nome</li>
+              <li>E-mail</li>
+              <li>Idade</li>
+              <li>Sexo</li>
+              <li>Altura</li>
+              <li>Peso</li>
+              <li>Objetivos de treino</li>
+              <li>Local de treino</li>
+              <li>Grupo muscular</li>
+              <li>Intensidade</li>
+              <li>Histórico de treinos</li>
+              <li>Configurações do app</li>
+            </ul>
+            <div class="policy-note">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+              </svg>
+              <span>
+                <strong>Em breve:</strong> fotos enviadas voluntariamente pelo usuário poderão ser
+                utilizadas para análise corporal <span class="policy-badge-future">futuro</span>.
+                Independentemente do recurso, nenhuma informação coletada pelo Arno AI é vendida a
+                terceiros.
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Como usamos essas informações -->
+        <article id="como-utilizamos" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">03</span> Como utilizamos seus dados</h3>
+            <p>As informações coletadas são utilizadas exclusivamente para:</p>
+            <ul>
+              <li>Gerar treinos personalizados</li>
+              <li>Melhorar sua experiência no app</li>
+              <li>Salvar suas preferências</li>
+              <li>Lembrar suas configurações</li>
+              <li>Aprimorar futuras funcionalidades</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 4. Armazenamento -->
+        <article id="armazenamento" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">04</span> Armazenamento</h3>
+            <p>
+              Atualmente, todos os seus dados ficam armazenados <strong>localmente no seu dispositivo</strong>.
+              O Arno AI não envia essas informações para servidores externos.
+            </p>
+            <p>
+              Caso futuramente seja implementada sincronização em nuvem, esta política será atualizada
+              para refletir claramente essa mudança antes de qualquer coleta adicional.
+            </p>
+          </div>
+        </article>
+
+        <!-- 5. Segurança -->
+        <article id="seguranca" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 13c0 5-3.5 7.5-7.5 9-.5.17-1 .17-1.5 0C7 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.79 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">05</span> Segurança</h3>
+            <p>
+              Levamos a segurança dos seus dados a sério. O Arno AI busca seguir boas práticas de
+              proteção de informações em todas as etapas do aplicativo.
+            </p>
+            <p>
+              Nenhuma informação pessoal é compartilhada com terceiros sem a sua autorização.
+            </p>
+          </div>
+        </article>
+
+        <!-- 6. Uso da câmera -->
+        <article id="camera" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">06</span> Uso da câmera</h3>
+            <p>
+              A câmera do seu dispositivo é utilizada <strong>apenas quando você solicitar</strong> essa
+              funcionalidade dentro do aplicativo.
+            </p>
+            <p>
+              Qualquer foto capturada é usada exclusivamente para análise corporal e geração de treinos
+              personalizados. Nenhuma foto é enviada ou compartilhada sem a sua autorização explícita.
+            </p>
+          </div>
+        </article>
+
+        <!-- 7. Cookies -->
+        <article id="cookies" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">07</span> Cookies</h3>
+            <p>
+              O site do Arno AI é hospedado no GitHub Pages e, atualmente, não possui sistema de
+              anúncios ou rastreamento complexo.
+            </p>
+            <p>
+              Podem ser utilizados apenas cookies ou armazenamento local estritamente necessários para o
+              funcionamento correto do site e do aplicativo.
+            </p>
+          </div>
+        </article>
+
+        <!-- 8. Direitos do usuário -->
+        <article id="direitos" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">08</span> Direitos do usuário</h3>
+            <p>Você tem total controle sobre os seus dados dentro do Arno AI. A qualquer momento, você pode:</p>
+            <ul>
+              <li>Alterar seus dados</li>
+              <li>Apagar seus dados</li>
+              <li>Parar de utilizar o serviço</li>
+              <li>Solicitar futuras alterações</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 9. Alterações nesta política -->
+        <article id="alteracoes" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M8 16H3v5"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">09</span> Alterações nesta política</h3>
+            <p>
+              Esta Política de Privacidade poderá ser modificada no futuro, conforme o Arno AI evolui
+              e novas funcionalidades são adicionadas.
+            </p>
+            <p>
+              A data da última atualização estará sempre visível no topo desta página.
+            </p>
+          </div>
+        </article>
+
+        <!-- 10. Contato -->
+        <article id="contato" class="feature-card policy-card policy-reveal">
+          <div class="policy-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </div>
+          <div class="policy-card-body">
+            <h3 class="policy-card-title"><span class="policy-card-index">10</span> Contato</h3>
+            <p>
+              No momento, o Arno AI ainda não possui um canal oficial de contato disponível.
+            </p>
+            <div class="policy-contact-pending">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+              </svg>
+              <span>Em breve, disponibilizaremos um canal oficial de suporte para dúvidas sobre privacidade.</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="../index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </a>
+
+      <p class="footer-copyright">© 2026 Arno AI. Todos os direitos reservados.</p>
+
+      <div class="footer-links">
+        <a href="../index.html" class="footer-link">Página Inicial</a>
+        <a href="#" class="footer-link" aria-disabled="true" title="Em breve">Sobre</a>
+        <a href="#" class="footer-link" aria-disabled="true" title="Em breve">FAQ</a>
+        <a href="#" class="footer-link" aria-disabled="true" title="Em breve">Termos de Uso</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="policy-back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script>
+    // Menu mobile (mesmo comportamento das demais páginas do site)
+    (function () {
+      var btn = document.getElementById('mobileMenuBtn');
+      var menu = document.getElementById('mobileMenu');
+      if (!btn || !menu) return;
+
+      var menuIcon = btn.querySelector('.menu-icon');
+      var closeIcon = btn.querySelector('.close-icon');
+
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    // Animação leve ao aparecer (fade + slide) para índice e cards de conteúdo
+    (function () {
+      var elements = document.querySelectorAll('.policy-reveal');
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      elements.forEach(function (el) { observer.observe(el); });
+    })();
+
+    // Botão flutuante "voltar ao topo"
+    (function () {
+      var backToTop = document.getElementById('backToTop');
+      if (!backToTop) return;
+
+      window.addEventListener('scroll', function () {
+        backToTop.classList.toggle('is-visible', window.scrollY > 500);
+      }, { passive: true });
+
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>
