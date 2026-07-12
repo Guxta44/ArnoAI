@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Perguntas Frequentes - Arno AI</title>
+  <meta name="description" content="Tire suas dúvidas sobre o Arno AI: como funciona, quais dados são usados, se é realmente gratuito, em quais plataformas está disponível e muito mais.">
+  <meta name="keywords" content="faq, perguntas frequentes, dúvidas, arno ai, treino gratuito, academia, fitness, IA, inteligência artificial, personal trainer, musculação">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://guxta44.github.io/ArnoAI/faq/">
+
+  <meta name="theme-color" content="#39FF88">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Perguntas Frequentes - Arno AI">
+  <meta property="og:description" content="Tire suas dúvidas sobre como o Arno AI funciona, seus dados, treinos gerados por IA e disponibilidade nas plataformas.">
+  <meta property="og:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+  <meta property="og:url" content="https://guxta44.github.io/ArnoAI/faq/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Perguntas Frequentes - Arno AI">
+  <meta name="twitter:description" content="Tire suas dúvidas sobre como o Arno AI funciona, seus dados, treinos gerados por IA e disponibilidade nas plataformas.">
+  <meta name="twitter:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Reutiliza a folha de estilos principal do site (nenhuma regra existente é alterada) -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="../icone.png">
+  <link rel="apple-touch-icon" href="../icone.png">
+  <link rel="manifest" href="../manifest.json">
+
+  <!-- Dados estruturados (FAQPage) para melhor exibição nos resultados de busca -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que é o Arno AI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "O Arno AI é uma plataforma que utiliza Inteligência Artificial para gerar treinos personalizados e gratuitos, pensada para quem não tem condições de pagar uma academia." }
+      },
+      {
+        "@type": "Question",
+        "name": "O Arno AI é realmente gratuito?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. O Arno AI é 100% gratuito, sem mensalidades e sem custos escondidos." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais dados preciso informar para gerar um treino?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nome, idade, altura, peso, dias de treino por semana, carga máxima, duração do treino e o grupo muscular desejado. O app calcula seu IMC automaticamente." }
+      },
+      {
+        "@type": "Question",
+        "name": "Em quais plataformas o Arno AI está disponível?",
+        "acceptedAnswer": { "@type": "Answer", "text": "O Arno AI já está disponível para Windows. As versões para Android estão em desenvolvimento, e a versão para iPhone chegará em breve." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /*
+      Estilos exclusivos da página de FAQ.
+      Mesmo padrão das páginas anteriores: reaproveita ao máximo as
+      classes já existentes no styles.css e cria apenas o necessário,
+      prefixado com "faq-", sem redefinir nenhuma classe global.
+    */
+
+    /* ---------- Hero ---------- */
+    .faq-hero {
+      position: relative;
+      padding: 7rem 0 3rem;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .faq-hero { padding: 8.5rem 0 4rem; }
+    }
+
+    .faq-hero .hero-blob-1 { top: -6rem; left: 10%; }
+    .faq-hero .hero-blob-2 { bottom: -8rem; right: 10%; }
+
+    .faq-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+
+    @media (min-width: 640px) {
+      .faq-title { font-size: 2.75rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .faq-title { font-size: 3.25rem; }
+    }
+
+    .faq-subtitle {
+      max-width: 38rem;
+      margin: 1.25rem auto 0;
+      font-size: 1.0625rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    /* ---------- Categorias (índice de atalho) ---------- */
+    .faq-categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .faq-category-pill {
+      padding: 0.5rem 1.1rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(51, 51, 51, 0.5);
+      background-color: rgba(26, 26, 26, 0.5);
+      color: var(--muted-foreground);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .faq-category-pill:hover {
+      border-color: rgba(22, 163, 74, 0.5);
+      color: var(--foreground);
+      background-color: var(--card);
+    }
+
+    /* ---------- Grupos de perguntas ---------- */
+    .faq-group {
+      scroll-margin-top: 6rem;
+    }
+
+    .faq-group + .faq-group {
+      margin-top: 3rem;
+    }
+
+    .faq-group-title {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .faq-group-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.5rem;
+      background-color: rgba(22, 163, 74, 0.1);
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    /* ---------- Item do accordion (usa <details>/<summary> nativos) ---------- */
+    .faq-item {
+      border-radius: var(--radius);
+      border: 1px solid rgba(51, 51, 51, 0.5);
+      background-color: rgba(26, 26, 26, 0.5);
+      backdrop-filter: blur(8px);
+      transition: border-color 0.25s ease, background-color 0.25s ease;
+      overflow: hidden;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(22, 163, 74, 0.4);
+    }
+
+    .faq-item[open] {
+      border-color: rgba(22, 163, 74, 0.5);
+      background-color: var(--card);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.15rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-question-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      background-color: rgba(22, 163, 74, 0.1);
+      color: var(--primary);
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .faq-item[open] .faq-question-icon {
+      transform: rotate(45deg);
+      background-color: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.25rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+      font-size: 0.9375rem;
+    }
+
+    .faq-answer p + p {
+      margin-top: 0.75rem;
+    }
+
+    /* Animação leve de abertura (respeita prefers-reduced-motion) */
+    @media (prefers-reduced-motion: no-preference) {
+      .faq-answer {
+        animation: faqFadeIn 0.25s ease;
+      }
+    }
+
+    @keyframes faqFadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- Card de contato ao final ---------- */
+    .faq-contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.75rem;
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(51, 51, 51, 0.5);
+      background-color: rgba(26, 26, 26, 0.5);
+    }
+
+    .faq-contact-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: rgba(22, 163, 74, 0.1);
+      color: var(--primary);
+    }
+
+    .faq-contact-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    .faq-contact-text {
+      max-width: 32rem;
+      color: var(--muted-foreground);
+      font-size: 0.9375rem;
+    }
+
+    /* ---------- Rodapé: link ativo e desabilitado (mesmo padrão das outras páginas) ---------- */
+    .footer-link[aria-disabled="true"] {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    .footer-link[aria-current="page"] {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ---------- Reveal on scroll (mesmo padrão das outras páginas) ---------- */
+    .faq-reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .faq-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .faq-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    /* ---------- Botão voltar ao topo (mesmo padrão das outras páginas) ---------- */
+    .faq-back-to-top {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      color: var(--foreground);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+    }
+
+    .faq-back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .faq-back-to-top:hover {
+      border-color: rgba(22, 163, 74, 0.5);
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-content">
+      <a href="../index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <a href="../index.html#recursos" class="nav-link">Recursos</a>
+        <a href="../index.html#treinos" class="nav-link">Treinos</a>
+        <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="../index.html" class="btn btn-outline" style="text-decoration: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 19-7-7 7-7"/>
+            <path d="M19 12H5"/>
+          </svg>
+          Voltar
+        </a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/>
+          <line x1="4" x2="20" y1="6" y2="6"/>
+          <line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+        <svg class="close-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="nav-mobile hidden" id="mobileMenu" aria-label="Navegação mobile">
+      <a href="../index.html#recursos" class="nav-link">Recursos</a>
+      <a href="../index.html#treinos" class="nav-link">Treinos</a>
+      <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+      <a href="../index.html" class="btn btn-primary btn-full" style="text-decoration: none;">Voltar ao Início</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="faq-hero">
+      <div class="hero-bg">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+      </div>
+
+      <div class="container">
+        <div class="badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>
+          </svg>
+          <span>Tire suas dúvidas</span>
+        </div>
+
+        <h1 class="faq-title">Perguntas Frequentes</h1>
+
+        <p class="faq-subtitle">
+          Tudo o que você precisa saber sobre o Arno AI, seus treinos, seus dados e a disponibilidade do aplicativo.
+        </p>
+
+        <nav class="faq-categories" aria-label="Categorias de perguntas frequentes">
+          <a href="#geral" class="faq-category-pill">Geral</a>
+          <a href="#conta-e-dados" class="faq-category-pill">Conta e Dados</a>
+          <a href="#treinos-e-ia" class="faq-category-pill">Treinos e IA</a>
+          <a href="#saude-e-seguranca" class="faq-category-pill">Saúde e Segurança</a>
+          <a href="#plataformas-e-suporte" class="faq-category-pill">Plataformas e Suporte</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ===================== PERGUNTAS ===================== -->
+    <section class="section section-border" aria-label="Perguntas e respostas">
+      <div class="container">
+
+        <!-- Categoria: Geral -->
+        <div id="geral" class="faq-group faq-reveal">
+          <h2 class="faq-group-title">
+            <span class="faq-group-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+              </svg>
+            </span>
+            Geral
+          </h2>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">
+                O que é o Arno AI?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>O Arno AI é uma plataforma que usa Inteligência Artificial para gerar treinos personalizados, pensada especialmente para quem não tem condições de pagar uma academia, mas quer treinar com segurança e orientação de qualidade.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                O Arno AI é realmente gratuito?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sim. O Arno AI é 100% gratuito, sem mensalidades e sem pegadinhas.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Quem criou o Arno AI?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>O Arno AI nasceu da ideia de um adolescente de 13 anos que sonha em ser engenheiro de software. Você pode conhecer a história completa na página <a href="../sobre/index.html" class="text-primary">Sobre</a>.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Categoria: Conta e Dados -->
+        <div id="conta-e-dados" class="faq-group faq-reveal">
+          <h2 class="faq-group-title">
+            <span class="faq-group-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            Conta e Dados
+          </h2>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">
+                Preciso criar uma conta para usar o app?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sim. É preciso criar uma conta com nome, e-mail e senha para começar a gerar seus treinos.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Quais dados preciso informar para gerar um treino?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Nome, idade, altura e peso (o app calcula seu IMC automaticamente), quantos dias por semana você vai treinar, sua carga máxima, a duração do treino e o grupo muscular desejado.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Meus dados ficam salvos em algum servidor?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Não. Atualmente, todos os seus dados ficam armazenados localmente no seu dispositivo. Mais detalhes na nossa <a href="../politica/index.html" class="text-primary">Política de Privacidade</a>.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Posso apagar meus dados?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sim. Você pode alterar ou apagar seus dados e parar de utilizar o serviço a qualquer momento.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Categoria: Treinos e IA -->
+        <div id="treinos-e-ia" class="faq-group faq-reveal">
+          <h2 class="faq-group-title">
+            <span class="faq-group-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 2v2"/><path d="M15 2v2"/><path d="M9 20v2"/><path d="M15 20v2"/><path d="M20 9h2"/><path d="M20 14h2"/><path d="M2 9h2"/><path d="M2 14h2"/>
+              </svg>
+            </span>
+            Treinos e Inteligência Artificial
+          </h2>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">
+                Como a IA gera meu treino?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>A IA analisa as informações que você fornece — idade, altura, peso, IMC, carga máxima, duração e grupo muscular — e monta um treino sob medida para o seu perfil.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Posso enviar uma foto para a IA analisar meu corpo?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sim, de forma opcional. Você pode enviar uma foto em pé para a IA analisar seu corpo e tornar os exercícios ainda mais adequados e viáveis para você.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Os exercícios se adaptam ao meu peso e IMC?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sim. Em casos de obesidade em nível mais alto, os exercícios são modificados para proteger as articulações e reduzir o risco de lesões.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Posso treinar em casa ou preciso ir à academia?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Você escolhe. O Arno AI gera treinos adaptados tanto para casa quanto para academia, de acordo com sua preferência.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Os exercícios têm vídeo explicativo?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sim. Cada exercício vem com um link do YouTube, com legenda e dublagem automáticas, mostrando como executar o movimento corretamente.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Consigo exportar meu treino?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Sim. Você pode exportar seu treino em PDF e salvá-lo onde preferir. O app também tem histórico, perfil e um sistema de ofensiva que mostra qual é o seu grupo muscular favorito.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Categoria: Saúde e Segurança -->
+        <div id="saude-e-seguranca" class="faq-group faq-reveal">
+          <h2 class="faq-group-title">
+            <span class="faq-group-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/>
+              </svg>
+            </span>
+            Saúde e Segurança
+          </h2>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">
+                O Arno AI substitui um profissional de educação física?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Não. O Arno AI é uma ferramenta de auxílio e não substitui a orientação de médico, fisioterapeuta, nutricionista ou educador físico. Antes de iniciar um treino intenso, procure orientação profissional.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Senti dor durante o treino, o que devo fazer?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Interrompa o treino imediatamente. Sentir dor não é normal e pode ser sinal de que algo precisa de atenção — procure orientação profissional se a dor persistir.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Categoria: Plataformas e Suporte -->
+        <div id="plataformas-e-suporte" class="faq-group faq-reveal">
+          <h2 class="faq-group-title">
+            <span class="faq-group-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>
+              </svg>
+            </span>
+            Plataformas e Suporte
+          </h2>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">
+                Em quais plataformas o Arno AI está disponível?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>O Arno AI já está disponível para Windows. As versões para Android estão em desenvolvimento, e a versão para iPhone chegará em breve. Veja mais na página <a href="../sobre/index.html" class="text-primary">Sobre</a>.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Existe um canal de suporte oficial?
+                <span class="faq-question-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </span>
+              </summary>
+              <div class="faq-answer">
+                <p>Ainda não. Em breve disponibilizaremos um canal oficial de suporte para dúvidas e sugestões.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== NÃO ENCONTROU SUA DÚVIDA ===================== -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="faq-contact-card faq-reveal">
+          <div class="faq-contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>
+            </svg>
+          </div>
+          <h2 class="faq-contact-title">Não encontrou sua dúvida?</h2>
+          <p class="faq-contact-text">Em breve disponibilizaremos um canal oficial de suporte. Até lá, dá uma olhada nas páginas de <a href="../politica/index.html" class="text-primary">Política de Privacidade</a> e <a href="../termos/index.html" class="text-primary">Termos de Uso</a> — talvez sua resposta esteja lá.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="../index.html" class="logo" style="text-decoration: none; color: inherit;">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </a>
+
+      <p class="footer-copyright">© 2026 Arno AI. Todos os direitos reservados.</p>
+
+      <div class="footer-links">
+        <a href="../index.html" class="footer-link">Página Inicial</a>
+        <a href="../politica/index.html" class="footer-link">Política de Privacidade</a>
+        <a href="../termos/index.html" class="footer-link">Termos de Uso</a>
+        <a href="../sobre/index.html" class="footer-link">Sobre</a>
+        <a href="index.html" class="footer-link" aria-current="page">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="faq-back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script>
+    // Menu mobile (mesmo comportamento das demais páginas do site)
+    (function () {
+      var btn = document.getElementById('mobileMenuBtn');
+      var menu = document.getElementById('mobileMenu');
+      if (!btn || !menu) return;
+
+      var menuIcon = btn.querySelector('.menu-icon');
+      var closeIcon = btn.querySelector('.close-icon');
+
+      btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.add('hidden');
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    // Animação leve ao aparecer (fade + slide) para os grupos de perguntas
+    (function () {
+      var elements = document.querySelectorAll('.faq-reveal');
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      elements.forEach(function (el) { observer.observe(el); });
+    })();
+
+    // Fecha os outros itens do mesmo grupo ao abrir um novo (accordion por grupo)
+    (function () {
+      document.querySelectorAll('.faq-group').forEach(function (group) {
+        var items = group.querySelectorAll('.faq-item');
+        items.forEach(function (item) {
+          item.addEventListener('toggle', function () {
+            if (item.open) {
+              items.forEach(function (other) {
+                if (other !== item) other.open = false;
+              });
+            }
+          });
+        });
+      });
+    })();
+
+    // Botão flutuante "voltar ao topo"
+    (function () {
+      var backToTop = document.getElementById('backToTop');
+      if (!backToTop) return;
+
+      window.addEventListener('scroll', function () {
+        backToTop.classList.toggle('is-visible', window.scrollY > 500);
+      }, { passive: true });
+
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>
