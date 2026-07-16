@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Arno AI</title>
+  <meta name="description" content="Entre em contato com a equipe da Arno AI para dúvidas, sugestões, bugs, parcerias e feedbacks.">
+  <meta name="keywords" content="contato, suporte, arno ai, personal trainer ia">
+  <meta name="contact" content="arnoai2026@gmail.com">
+
+  <meta name="theme-color" content="#39FF88">
+  <meta property="og:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://guxta44.github.io/ArnoAI/icone.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="../icone.png">
+  <link rel="apple-touch-icon" href="../icone.png">
+  <link rel="manifest" href="../manifest.json">
+
+  <style>
+    /* Estilos complementares apenas para esta página,
+       reaproveitando as variáveis e classes já existentes
+       em styles.css. Nenhuma classe existente foi alterada. */
+    .footer-link[aria-current="page"] {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .footer-link[aria-disabled="true"] {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .footer-dev {
+      opacity: 0.7;
+      font-size: 0.875rem;
+      margin: 0;
+    }
+
+    .footer-contact-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .footer-email-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.2s ease;
+    }
+
+    .footer-email-link:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    /* Cartão de contato da página Contato */
+    .contact-section {
+      padding-top: 3rem;
+    }
+
+    .contact-card {
+      max-width: 560px;
+      margin: 0 auto;
+      background: var(--card, rgba(255, 255, 255, 0.03));
+      border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+      border-radius: 1rem;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .contact-card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-card-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.7;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card-email {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      word-break: break-word;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin: 1.5rem 0 0;
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-topic {
+      font-size: 0.85rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border, rgba(255, 255, 255, 0.15));
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </div>
+
+      <nav class="nav-desktop">
+        <a href="../index.html#recursos" class="nav-link">Recursos</a>
+        <a href="../index.html#treinos" class="nav-link">Treinos</a>
+        <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+        <a href="index.html" class="nav-link" aria-current="page">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://github.com/Guxta44/ArnoAI/releases/download/v1.0/arno_ai.exe?raw=true" download="arno_ai.exe" class="btn btn-primary" style="text-decoration: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" x2="12" y1="15" y2="3"/>
+          </svg>
+          Baixar App
+        </a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/>
+          <line x1="4" x2="20" y1="6" y2="6"/>
+          <line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+        <svg class="close-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="nav-mobile hidden" id="mobileMenu">
+      <a href="../index.html#recursos" class="nav-link">Recursos</a>
+      <a href="../index.html#treinos" class="nav-link">Treinos</a>
+      <a href="../index.html#como-funciona" class="nav-link">Como Funciona</a>
+      <a href="index.html" class="nav-link" aria-current="page">Contato</a>
+      <a href="https://github.com/Guxta44/ArnoAI/releases/download/v1.0/arno_ai.exe?raw=true" download="arno_ai.exe" class="btn btn-primary btn-full" style="text-decoration: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" x2="12" y1="15" y2="3"/>
+        </svg>
+        Baixar App
+      </a>
+    </nav>
+  </header>
+
+  <section class="section contact-section section-border">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title">Contato</h1>
+        <p class="section-description">
+          Tem alguma dúvida, sugestão, encontrou um bug, quer propor uma parceria
+          ou só quer deixar um feedback? Fale com a gente pelo nosso e-mail oficial.
+          Vamos adorar ouvir você!
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon">📧</div>
+        <div class="contact-card-label">E-mail Oficial</div>
+        <div class="contact-card-email">arnoai2026@gmail.com</div>
+
+        <a href="mailto:arnoai2026@gmail.com" class="btn btn-primary btn-lg" style="text-decoration: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          Enviar e-mail
+        </a>
+
+        <ul class="contact-topics">
+          <li class="contact-topic">Dúvidas</li>
+          <li class="contact-topic">Sugestões</li>
+          <li class="contact-topic">Bugs</li>
+          <li class="contact-topic">Parcerias</li>
+          <li class="contact-topic">Feedbacks</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.4 14.4 9.6 9.6"/>
+            <path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/>
+            <path d="m21.5 21.5-1.4-1.4"/>
+            <path d="M3.9 3.9 2.5 2.5"/>
+            <path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/>
+          </svg>
+        </div>
+        <span class="logo-text">Arno AI</span>
+      </div>
+
+      <p class="footer-copyright">ArnoAI © 2026 — Desenvolvido por ROBEN</p>
+
+      <p class="footer-contact-line">
+        📧 <a href="mailto:arnoai2026@gmail.com" class="footer-email-link">arnoai2026@gmail.com</a>
+      </p>
+
+      <div class="footer-links">
+        <a href="../index.html" class="footer-link">Página Inicial</a>
+        <a href="../politica/index.html" class="footer-link">Política de Privacidade</a>
+        <a href="../termos/index.html" class="footer-link">Termos de Uso</a>
+        <a href="../sobre/index.html" class="footer-link">Sobre</a>
+        <a href="../FAQ/index.html" class="footer-link">FAQ</a>
+        <a href="index.html" class="footer-link" aria-current="page">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
