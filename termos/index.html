@@ -374,6 +374,59 @@
         transition: none;
       }
     }
+
+    /* ---------- Seção de contato profissional (nova) ---------- */
+    .terms-contact-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.25rem;
+      padding: 2.5rem 2rem;
+    }
+
+    .terms-contact-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 0.5rem;
+      background-color: rgba(22, 163, 74, 0.1);
+      color: var(--primary);
+    }
+
+    .terms-contact-section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .terms-contact-section p {
+      max-width: 34rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+    }
+
+    .terms-contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--foreground);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .terms-contact-email:hover {
+      color: var(--primary);
+    }
+
+    .terms-contact-email svg {
+      color: var(--primary);
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>
@@ -741,6 +794,37 @@
             </div>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NOVA SEÇÃO: CONTATO PROFISSIONAL ===================== -->
+    <section class="section section-border" aria-labelledby="contact-section-heading">
+      <div class="container">
+        <div class="feature-card terms-contact-section terms-reveal">
+          <div class="terms-contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </div>
+
+          <h2 id="contact-section-heading">Contato</h2>
+
+          <p>
+            Caso tenha dúvidas sobre estes Termos de Uso, queira relatar um problema, sugerir
+            melhorias ou entrar em contato com a equipe do Arno AI, utilize o e-mail oficial abaixo.
+          </p>
+
+          <a href="mailto:arnoai2026@gmail.com" class="terms-contact-email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            arnoai2026@gmail.com
+          </a>
+
+          <a href="mailto:arnoai2026@gmail.com" class="btn btn-primary" style="text-decoration: none;">
+            Enviar e-mail
+          </a>
         </div>
       </div>
     </section>
