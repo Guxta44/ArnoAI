@@ -6,7 +6,8 @@
   <title>Arno AI - Seu Personal Trainer Inteligente</title>
   <meta name="description" content="Gere treinos personalizados com inteligência artificial. Treinos adaptados ao seu corpo, objetivos e preferências. 100% gratuito.">
   <meta name="keywords" content="treino, academia, fitness, IA, inteligência artificial, personal trainer, musculação">
-  
+  <meta name="contact" content="arnoai2026@gmail.com">
+
   <meta name="theme-color" content="#39FF88">
   <meta property="og:image" content="https://guxta44.github.io/ArnoAI/icone.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -35,6 +36,43 @@
       pointer-events: none;
       opacity: 0.55;
     }
+
+    /* ==== Complemento: rodapé moderno com contato ====
+       Apenas estilos novos, adicionados sem tocar em styles.css
+       nem alterar nenhuma classe já existente. */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .footer-dev {
+      opacity: 0.7;
+      font-size: 0.875rem;
+      margin: 0;
+    }
+
+    .footer-contact-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .footer-email-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.2s ease;
+    }
+
+    .footer-email-link:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -57,6 +95,7 @@
         <a href="#recursos" class="nav-link">Recursos</a>
         <a href="#treinos" class="nav-link">Treinos</a>
         <a href="#como-funciona" class="nav-link">Como Funciona</a>
+        <a href="contato/index.html" class="nav-link">Contato</a>
       </nav>
 
       <div class="header-actions">
@@ -87,6 +126,7 @@
       <a href="#recursos" class="nav-link">Recursos</a>
       <a href="#treinos" class="nav-link">Treinos</a>
       <a href="#como-funciona" class="nav-link">Como Funciona</a>
+      <a href="contato/index.html" class="nav-link">Contato</a>
       <a href="https://github.com/Guxta44/ArnoAI/releases/download/v1.0/arno_ai.exe?raw=true" download="arno_ai.exe" class="btn btn-primary btn-full" style="text-decoration: none;">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -477,7 +517,11 @@
         <span class="logo-text">Arno AI</span>
       </div>
 
-      <p class="footer-copyright">© 2026 Arno AI. Todos os direitos reservados.</p>
+      <p class="footer-copyright">ArnoAI © 2026 — Desenvolvido por ROBEN</p>
+
+      <p class="footer-contact-line">
+        📧 <a href="mailto:arnoai2026@gmail.com" class="footer-email-link">arnoai2026@gmail.com</a>
+      </p>
 
       <div class="footer-links">
         <a href="index.html" class="footer-link" aria-current="page">Página Inicial</a>
@@ -485,6 +529,7 @@
         <a href="termos/index.html" class="footer-link">Termos de Uso</a>
         <a href="sobre/index.html" class="footer-link">Sobre</a>
         <a href="FAQ/index.html" class="footer-link">FAQ</a>
+        <a href="contato/index.html" class="footer-link">Contato</a>
       </div>
     </div>
   </footer>
