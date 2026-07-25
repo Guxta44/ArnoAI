@@ -24,12 +24,6 @@ https://guxta44.github.io/ArnoAI/
 
 ---
 
-## 📸 Imagens
-
-(coloque prints do site)
-
----
-
 ## 🚀 Tecnologias
 
 - HTML5
@@ -66,7 +60,15 @@ https://whatsapp.com/channel/0029VbDMawXCsU9LokYnZb16
 
 ## 👨‍💻 Desenvolvedor
 
-Desenvolvido por Gusta.<img width="1194" height="949" alt="image" src="https://github.com/user-attachments/assets/c681c18d-cd83-41a3-a4d6-cd89e0742215" /><img width="1279" height="1000" alt="image" src="https://github.com/user-attachments/assets/7cb4549b-9721-4827-a6ea-3ac44f4937c5" />
+Desenvolvido por Gusta.<img width="1194" height="949" alt="image" src="https://github.com/user-attachments/assets/c681c18d-cd83-41a3-a4d6-cd89e0742215" /><img width="1279" height="1000" alt="image" src="https://github.com/user-attachments/assets/7cb4549b-9721-4827-a6ea-3ac44f4937c5"<img width="651" height="743" alt="image" src="https://github.com/user-attachments/assets/954a157d-6dd1-4368-865a-900c4ef6475f" />
+<img width="673" height="753" alt="image" src="https://github.com/user-attachments/assets/714b535c-ea9e-4cf1-a374-5a30333f245d" />
+<img width="678" height="758" alt="image" src="https://github.com/user-attachments/assets/de1fb142-414b-4b11-8e70-7df61f3cbf37" />
+<img width="660" height="815" alt="image" src="https://github.com/user-attachments/assets/c6328942-b206-4e16-a300-0bb5a8da7285" />
+<img width="687" height="847" alt="image" src="https://github.com/user-attachments/assets/f3c10e2d-aaf1-4b4c-b77e-39f0be452a4b" />
+<img width="1279" height="999" alt="image" src="https://github.com/user-attachments/assets/852b9b49-6a5a-493e-b945-8d9a9a10b087" />
+<img width="499" height="989" alt="image" src="https://github.com/user-attachments/assets/5989e830-4caa-46bf-af92-8b363fa80f99" />
+<img width="502" height="951" alt="image" src="https://github.com/user-attachments/assets/280889ec-9eca-4e5c-bad9-f9f05c34bea7" />
+ />
 <img width="1204" height="640" alt="image" src="https://github.com/user-attachments/assets/65af7d13-5e11-461c-8105-8b0f0414c28c" />
 <img width="1191" height="945" alt="image" src="https://github.com/user-attachments/assets/1c6000c9-c300-4521-882c-2fe111ced1a1" />
 ![Uploading image.png…]()
