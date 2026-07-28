@@ -152,3 +152,149 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+/* =========================================================
+   A PARTIR DAQUI: apenas ADIÇÕES novas para o redesign premium.
+   Nada acima desta linha foi alterado — toda a lógica original
+   do Arno AI continua funcionando exatamente como antes.
+   ========================================================= */
+
+// Reveal genérico para as novas seções (.reveal), sem interferir
+// no observer/animação já existente acima.
+(function () {
+  const revealEls = document.querySelectorAll('.reveal');
+  if (!revealEls.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('is-visible'), i * 60);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+})();
+
+// Contador animado para os números da seção de estatísticas
+// (só anima valores numéricos como "100%" ou "+8"; textos como
+// "IA" ou "24/7" apenas recebem o fade padrão acima).
+(function () {
+  const statValues = document.querySelectorAll('.stat-value');
+  if (!statValues.length || !('IntersectionObserver' in window)) return;
+
+  function animateCount(el) {
+    const raw = el.textContent.trim();
+    const match = raw.match(/^(\+?)(\d+)(%?)$/);
+    if (!match) return; // não é um número simples: mantém o texto original
+
+    const prefix = match[1];
+    const target = parseInt(match[2], 10);
+    const suffix = match[3];
+    const duration = 1200;
+    const start = performance.now();
+
+    function step(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(target * eased);
+      el.textContent = `${prefix}${current}${suffix}`;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = raw;
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        countObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  statValues.forEach(el => countObserver.observe(el));
+})();
+
+// Parallax leve nas manchas de luz (blobs) e no mockup do app,
+// seguindo o movimento do mouse — bem sutil, sem exagero.
+(function () {
+  const blobs = document.querySelectorAll('.hero-blob');
+  const phone = document.querySelector('.hero-visual .phone-mock');
+  if (!blobs.length && !phone) return;
+
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  hero.addEventListener('mousemove', (e) => {
+    const { innerWidth, innerHeight } = window;
+    const x = (e.clientX / innerWidth - 0.5);
+    const y = (e.clientY / innerHeight - 0.5);
+
+    blobs.forEach((blob, i) => {
+      const factor = i % 2 === 0 ? 18 : -14;
+      blob.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+    });
+
+    if (phone) {
+      phone.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+    }
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    blobs.forEach(blob => { blob.style.transform = ''; });
+    if (phone) phone.style.transform = '';
+  });
+})();
+
+// Efeito de brilho seguindo o cursor dentro dos cards de recursos
+(function () {
+  const cards = document.querySelectorAll('.feature-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+    });
+  });
+})();
+
+// Alternância entre as abas "App Mobile" e "Versão PC" na seção de prints
+(function () {
+  const tabs = document.querySelectorAll('.view-tab');
+  const panels = document.querySelectorAll('.view-panel');
+  if (!tabs.length || !panels.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const view = tab.dataset.view;
+
+      tabs.forEach(t => t.classList.toggle('is-active', t === tab));
+      panels.forEach(panel => {
+        panel.classList.toggle('hidden', panel.dataset.panel !== view);
+      });
+    });
+  });
+})();
+(function () {
+  const backToTop = document.getElementById('backToTop');
+  if (!backToTop) return;
+
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('is-visible', window.scrollY > 600);
+  }, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
