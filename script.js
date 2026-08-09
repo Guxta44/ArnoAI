@@ -298,3 +298,46 @@ document.head.appendChild(style);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 })();
+
+// Destaca no menu o link da seção que está visível na tela
+(function () {
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  if (!navLinks.length || !('IntersectionObserver' in window)) return;
+
+  const sections = Array.from(navLinks)
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+  if (!sections.length) return;
+
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = `#${entry.target.id}`;
+      navLinks.forEach(link => {
+        link.classList.toggle('is-active', link.getAttribute('href') === id);
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(section => navObserver.observe(section));
+})();
+
+// Leve efeito magnético nos botões principais do hero: o botão
+// "puxa" alguns pixels na direção do cursor. Sutil, some no touch.
+(function () {
+  if (window.matchMedia('(hover: none)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const magneticButtons = document.querySelectorAll('.hero-buttons .btn-primary, .cta-box .btn-primary');
+  magneticButtons.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.35 - 2}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+})();
