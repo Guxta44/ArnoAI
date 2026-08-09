@@ -40,6 +40,14 @@
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
   --gradient-primary: linear-gradient(135deg, #22c55e 0%, #16a34a 55%, #0f7d38 100%);
   --gradient-text: linear-gradient(135deg, #6ee7a0 0%, #22c55e 45%, #16a34a 100%);
+
+  /* ---- Assinatura "sinal vital": segunda cor (IA/dados) que
+     forma o duotone junto do verde (fitness/energia). Usada com
+     moderação em elementos ligados a análise/IA, nunca em massa. ---- */
+  --signal: #5b9dff;
+  --signal-soft: rgba(91, 157, 255, 0.14);
+  --gradient-signature: linear-gradient(90deg, #22c55e 0%, #7bd88f 35%, #5b9dff 100%);
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
 html {
@@ -291,6 +299,9 @@ body {
 .nav-link:hover { color: var(--foreground); }
 .nav-link:hover::after { width: 100%; }
 
+.nav-link.is-active { color: var(--foreground); }
+.nav-link.is-active::after { width: 100%; }
+
 .header-actions {
   display: none;
 }
@@ -389,6 +400,87 @@ body {
 @keyframes float-blob {
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(2.5%, -4%) scale(1.08); }
+}
+
+/* =========================================================
+   Assinatura visual: "linha de sinal" (EKG -> gráfico de barras)
+   Representa a ponte entre corpo (fitness) e dado (IA analisando).
+   Usada atrás do mockup no hero e como divisor fino entre seções.
+   ========================================================= */
+.signal-line {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.signal-line path {
+  fill: none;
+  stroke: url(#signalGradient);
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: signal-draw 2.6s var(--ease-premium) forwards, signal-flow 5s linear infinite 2.6s;
+}
+
+.signal-line circle {
+  fill: var(--signal);
+  filter: drop-shadow(0 0 6px rgba(91, 157, 255, 0.85));
+  opacity: 0;
+  animation: signal-dot 5s ease-in-out infinite 2.6s;
+}
+
+@keyframes signal-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes signal-flow {
+  0% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -140; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes signal-dot {
+  0%, 100% { opacity: 0; offset-distance: 0%; }
+  10%, 45% { opacity: 1; }
+  50% { offset-distance: 100%; opacity: 0; }
+}
+
+.hero-signal {
+  position: absolute;
+  left: 50%;
+  bottom: -6%;
+  transform: translateX(-50%);
+  width: 120%;
+  max-width: 640px;
+  opacity: 0.55;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.section-divider-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  background-color: var(--bg-elevated);
+}
+
+.section-divider {
+  max-width: 220px;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  opacity: 0.75;
+}
+
+.signal-line circle {
+  offset-rotate: 0deg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-line path { animation: none; stroke-dashoffset: 0; }
+  .signal-line circle { display: none; }
 }
 
 .hero-grid {
@@ -639,6 +731,17 @@ body {
   box-shadow: 0 0 10px var(--primary-light);
 }
 
+/* Chip "sinal": usado para o insight de IA, em contraste com o
+   verde do progresso/streak — reforça o duotone fitness + dado. */
+.float-chip--signal .dot {
+  background: var(--signal);
+  box-shadow: 0 0 10px var(--signal);
+}
+
+.float-chip--signal {
+  border-color: rgba(91, 157, 255, 0.25);
+}
+
 @media (max-width: 1023px) {
   .hero-visual { margin-top: 1rem; }
 }
@@ -669,9 +772,9 @@ body {
 .stat:hover { transform: translateY(-4px); }
 
 .stat-value {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 1.85rem;
+  font-weight: 600;
   background: var(--gradient-text);
   -webkit-background-clip: text;
   background-clip: text;
@@ -709,8 +812,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--primary-light);
@@ -768,6 +872,23 @@ body {
   transition: transform 0.4s var(--ease-premium), border-color 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
   overflow: hidden;
 }
+
+/* Fio de assinatura duotone (verde -> sinal) que "acende" no topo do
+   card ao passar o mouse — o mesmo gradiente do divisor de seção. */
+.feature-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-signature);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-premium);
+}
+
+.feature-card:hover::after { transform: scaleX(1); }
 
 .feature-card::before {
   content: '';
@@ -1103,7 +1224,8 @@ body {
 .exercise-details {
   display: flex;
   gap: 1rem;
-  font-size: 0.875rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
   color: var(--muted-foreground);
 }
 
