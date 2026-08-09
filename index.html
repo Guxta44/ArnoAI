@@ -13,13 +13,23 @@
 <meta name="twitter:image" content="https://guxta44.github.io/ArnoAI/icone.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" sizes="512x512" href="icone.png">
 <link rel="apple-touch-icon" href="icone.png">
 <link rel="manifest" href="manifest.json">
 </head>
 <body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="signalGradient" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#22c55e"/>
+<stop offset="45%" stop-color="#7bd88f"/>
+<stop offset="100%" stop-color="#5b9dff"/>
+</linearGradient>
+</defs>
+</svg>
 
 <header class="header">
 <div class="container header-content">
@@ -140,6 +150,10 @@ Baixar Aplicativo
 </div>
 
 <div class="hero-visual">
+<svg class="signal-line hero-signal" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+<path d="M0,32 L70,32 L86,10 L100,54 L114,4 L128,32 L230,32 L246,32 L258,16 L270,32 L340,32 L390,32 L410,12 L430,32 L500,32 L516,20 L528,44 L540,20 L552,32 L600,32"/>
+<circle r="4" style="offset-path: path('M0,32 L70,32 L86,10 L100,54 L114,4 L128,32 L230,32 L246,32 L258,16 L270,32 L340,32 L390,32 L410,12 L430,32 L500,32 L516,20 L528,44 L540,20 L552,32 L600,32');"/>
+</svg>
 <div class="float-chip float-chip--tl"><span class="dot"></span>Sequência: 12 dias</div>
 <div class="phone-mock">
 <div class="phone-mock__screen phone-mock__screen--photo">
@@ -147,7 +161,7 @@ Baixar Aplicativo
 <img src="print-home.png" alt="Tela inicial do aplicativo Arno AI" loading="lazy">
 </div>
 </div>
-<div class="float-chip float-chip--br"><span class="dot"></span>IA analisando dados</div>
+<div class="float-chip float-chip--br float-chip--signal"><span class="dot"></span>IA analisando dados</div>
 </div>
 </div>
 </div>
@@ -275,6 +289,13 @@ A Arno AI gera treinos específicos para cada grupo muscular que você quiser tr
 <p class="workouts-note">E muito mais grupos musculares disponíveis no app!</p>
 </div>
 </section>
+
+<div class="section-divider-wrap" aria-hidden="true">
+<svg class="signal-line section-divider" viewBox="0 0 300 40" preserveAspectRatio="none" focusable="false">
+<path d="M0,20 L40,20 L50,6 L60,32 L70,2 L80,20 L140,20 L150,20 L156,10 L163,20 L200,20 L230,20 L240,8 L250,20 L300,20"/>
+<circle r="3" style="offset-path: path('M0,20 L40,20 L50,6 L60,32 L70,2 L80,20 L140,20 L150,20 L156,10 L163,20 L200,20 L230,20 L240,8 L250,20 L300,20');"/>
+</svg>
+</div>
 
 <section id="como-funciona" class="section section-border">
 <div class="container">
