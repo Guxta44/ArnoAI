@@ -1613,3 +1613,115 @@ body {
   box-shadow: none;
   transform: translate(2px, 2px);
 }
+
+
+/* =========================================================
+   Arno AI — suporte a tema claro
+   Tema escuro permanece como padrão.
+   ========================================================= */
+:root {
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --background: #f5f7f5;
+  --foreground: #171a17;
+  --card: #ffffff;
+  --card-foreground: #171a17;
+  --primary: #16a34a;
+  --primary-foreground: #ffffff;
+  --secondary: #e8eee9;
+  --secondary-foreground: #171a17;
+  --muted: #e8eee9;
+  --muted-foreground: #525c54;
+  --border: #202820;
+  --bg-elevated: #e9eee9;
+  --border-soft: rgba(23, 26, 23, 0.18);
+  --glow-sm: 4px 4px 0 #c5cec6;
+  --glow-md: 6px 6px 0 #c5cec6;
+  --glow-lg: 10px 10px 0 #c5cec6;
+  --shadow-card: 6px 6px 0 #c5cec6;
+  --gradient-primary: #16a34a;
+  --gradient-text: #166534;
+}
+
+[data-theme="light"] body {
+  color: var(--foreground);
+  background-color: var(--background);
+  background-image: radial-gradient(rgba(23, 26, 23, 0.08) 1.5px, transparent 1.5px);
+}
+
+[data-theme="light"] .header {
+  background-color: rgba(245, 247, 245, 0.90);
+  border-bottom-color: var(--border-soft);
+}
+
+[data-theme="light"] .nav-link,
+[data-theme="light"] .logo,
+[data-theme="light"] .mobile-menu-btn {
+  color: var(--foreground);
+}
+
+[data-theme="light"] .section-dark,
+[data-theme="light"] .card,
+[data-theme="light"] .feature-card,
+[data-theme="light"] .browser-mock,
+[data-theme="light"] .exercise-item,
+[data-theme="light"] .faq-item {
+  background-color: var(--card);
+  color: var(--foreground);
+}
+
+[data-theme="light"] .browser-mock__bar {
+  background-color: #e8eee9;
+}
+
+[data-theme="light"] .browser-mock__screen {
+  background-color: #f5f7f5;
+}
+
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  background-color: #ffffff;
+  color: #171a17;
+  border-color: #b8c4ba;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.85rem;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--foreground);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.theme-toggle:hover {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    padding: 0.55rem 0.65rem;
+    font-size: 0.75rem;
+  }
+}
