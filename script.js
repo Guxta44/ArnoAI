@@ -55,13 +55,18 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
-  
-  if (currentScroll > 50) {
-    header.style.backgroundColor = 'rgba(18, 18, 18, 0.95)';
+  const isLight = document.documentElement.dataset.theme === 'light';
+
+  if (isLight) {
+    header.style.backgroundColor = currentScroll > 50
+      ? 'rgba(255, 255, 255, 0.96)'
+      : 'rgba(245, 247, 245, 0.90)';
   } else {
-    header.style.backgroundColor = 'rgba(18, 18, 18, 0.8)';
+    header.style.backgroundColor = currentScroll > 50
+      ? 'rgba(18, 18, 18, 0.95)'
+      : 'rgba(18, 18, 18, 0.8)';
   }
-  
+
   lastScroll = currentScroll;
 });
 
@@ -339,5 +344,66 @@ document.head.appendChild(style);
     btn.addEventListener('mouseleave', () => {
       btn.style.transform = '';
     });
+  });
+})();
+
+
+// =========================================================
+// Arno AI — alternância entre modo escuro e modo claro
+// O modo escuro continua sendo o padrão.
+// =========================================================
+(() => {
+  const toggle = document.getElementById('themeToggle');
+  if (!toggle) return;
+
+  const root = document.documentElement;
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(theme) {
+    const isLight = theme === 'light';
+
+    if (isLight) {
+      root.dataset.theme = 'light';
+    } else {
+      delete root.dataset.theme;
+    }
+
+    toggle.textContent = isLight ? '🌙 Modo escuro' : '☀️ Modo claro';
+    toggle.setAttribute(
+      'aria-label',
+      isLight ? 'Ativar modo escuro' : 'Ativar modo claro'
+    );
+
+    if (themeColor) {
+      themeColor.setAttribute('content', isLight ? '#f5f7f5' : '#0a0a0a');
+    }
+
+    const header = document.querySelector('.header');
+    if (header) {
+      const scrolled = window.scrollY > 50;
+      header.style.backgroundColor = isLight
+        ? (scrolled ? 'rgba(255, 255, 255, 0.96)' : 'rgba(245, 247, 245, 0.90)')
+        : (scrolled ? 'rgba(18, 18, 18, 0.95)' : 'rgba(18, 18, 18, 0.8)');
+    }
+  }
+
+  let savedTheme = 'dark';
+  try {
+    savedTheme = localStorage.getItem('arno-theme') || 'dark';
+  } catch (error) {
+    // Se o armazenamento estiver bloqueado, o tema continua funcionando na sessão.
+  }
+
+  applyTheme(savedTheme);
+
+  toggle.addEventListener('click', () => {
+    const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+    applyTheme(nextTheme);
+
+    try {
+      localStorage.setItem('arno-theme', nextTheme);
+    } catch (error) {
+      // A alternância continua funcionando mesmo sem salvar a preferência.
+    }
   });
 })();
