@@ -1,0 +1,75 @@
+/* Arno AI · redesign premium em movimento */
+:root {
+  --background:#080A09; --foreground:#F5F7F4; --card:#111512;
+  --primary:#16A34A; --primary-foreground:#F8FFF9; --secondary:#151916;
+  --muted:#151916; --muted-foreground:#A7B0A9; --border:rgba(230,240,232,.13);
+  --primary-light:#4ADE80; --primary-dark:#12823B; --ease-premium:cubic-bezier(.22,1,.36,1);
+}
+html {scroll-padding-top:6rem}
+body {background:#080A09;background-image:radial-gradient(ellipse at 50% -20%,rgba(22,163,74,.1),transparent 52%),linear-gradient(180deg,#080A09,#0A0D0B 54%,#080A09);color:#F5F7F4}
+body::before {content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.42;background:radial-gradient(500px circle at var(--pointer-x,50%) var(--pointer-y,20%),rgba(22,163,74,.075),transparent 62%)}
+::selection {background:#16A34A;color:#041007}
+.container {max-width:1320px}
+.header {background:rgba(8,10,9,.82);border-bottom:1px solid rgba(230,240,232,.09);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.header-content {height:5rem}
+.logo-icon {border:1px solid rgba(74,222,128,.5);border-radius:10px;box-shadow:0 0 22px rgba(22,163,74,.13)}
+.logo-text {letter-spacing:-.045em}
+.nav-link {color:#A7B0A9;transition:color .25s}
+.nav-link:hover,.nav-link.is-active {color:#F5F7F4}
+.nav-link::after {background:#4ADE80;box-shadow:0 0 12px rgba(74,222,128,.4)}
+.btn {border-radius:999px;text-transform:none;letter-spacing:.015em;font-weight:700;transition:transform .35s var(--ease-premium),box-shadow .35s ease,background-color .25s,border-color .25s}
+.btn-primary {background:linear-gradient(135deg,#16A34A,#22C55E);color:#041007;box-shadow:none}
+.btn-primary:hover {transform:translateY(-3px);box-shadow:0 10px 30px rgba(22,163,74,.22)}
+.btn-outline {background:rgba(255,255,255,.025);border:1px solid rgba(230,240,232,.19);color:#F5F7F4}
+.btn-outline:hover {background:rgba(22,163,74,.09);border-color:rgba(74,222,128,.6);transform:translateY(-3px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible {outline:2px solid #4ADE80;outline-offset:4px}
+.hero {min-height:min(900px,100svh);display:flex;align-items:center;padding:9.5rem 0 5.5rem;isolation:isolate}
+.hero-bg {z-index:-1}
+.hero-bg::after {background-image:linear-gradient(rgba(74,222,128,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(74,222,128,.045) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 50% 28%,#000 8%,transparent 100%)}
+.hero-blob {border:1px solid rgba(74,222,128,.24);border-radius:50%;box-shadow:0 0 80px rgba(22,163,74,.12),inset 0 0 36px rgba(22,163,74,.06)}
+.hero-blob-1 {width:170px;height:170px;background:radial-gradient(circle at 35% 35%,rgba(74,222,128,.2),rgba(22,163,74,.015) 70%)}
+.hero-blob-2 {width:120px;height:120px;background:radial-gradient(circle at 35% 35%,rgba(74,222,128,.18),rgba(22,163,74,.01) 70%)}
+.hero-content {text-align:left;position:relative;z-index:2}
+.hero-content .badge {border:1px solid rgba(74,222,128,.28);border-radius:999px;background:rgba(22,163,74,.08);color:#8BE8A8;box-shadow:none;font-size:.72rem;letter-spacing:.09em;padding:.48rem .85rem;margin-bottom:1.8rem;animation:arno-rise .8s var(--ease-premium) both}
+.hero-title {font-family:'Space Grotesk','Inter',sans-serif;font-size:clamp(3.25rem,7.8vw,7.8rem);line-height:.91;font-weight:700;letter-spacing:-.085em;text-wrap:balance;max-width:12ch}
+.hero-title--editorial {display:flex;flex-direction:column;align-items:flex-start}
+.hero-title-line {display:block;opacity:0;transform:translateY(115%);clip-path:inset(0 0 100% 0);animation:arno-title-reveal .95s var(--ease-premium) forwards}
+.hero-title-line:nth-child(1){animation-delay:.12s}.hero-title-line:nth-child(2){animation-delay:.27s}.hero-title-line:nth-child(3){animation-delay:.42s}
+.hero-title-accent {color:#4ADE80;text-shadow:0 0 42px rgba(22,163,74,.12)}.hero-period{color:#F5F7F4}
+.hero-description {max-width:34rem;margin:1.6rem 0 0;font-size:clamp(1rem,1.25vw,1.14rem);line-height:1.8;color:#A7B0A9;text-wrap:pretty;animation:arno-rise .8s .5s var(--ease-premium) both}
+.hero-buttons {justify-content:flex-start;align-items:center;margin-top:2rem;gap:.85rem;animation:arno-rise .8s .62s var(--ease-premium) both}
+.hero .stats {max-width:38rem;margin:3.2rem 0 0;padding-top:1.5rem;border-top:1px solid rgba(230,240,232,.12);gap:1.2rem;animation:arno-rise .8s .76s var(--ease-premium) both}
+.stat{text-align:left}.stat-value{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.55rem,2.6vw,2.25rem);font-weight:700;letter-spacing:-.06em;color:#F5F7F4}.stat-label{color:#8F9B92;font-size:.75rem}
+.hero-visual {min-height:31rem;perspective:1200px}
+.phone-mock {width:clamp(225px,23vw,292px);border:1px solid rgba(74,222,128,.5);border-radius:2rem;padding:.42rem;box-shadow:0 35px 100px rgba(0,0,0,.5),0 0 70px rgba(22,163,74,.12);animation:arno-phone-float 7s ease-in-out infinite;will-change:transform}
+.phone-mock__screen {border-radius:1.65rem;background:#0D100E}.phone-mock__card{border:1px solid rgba(74,222,128,.24);border-radius:.8rem}.phone-mock__ring-inner{color:#4ADE80}
+.float-chip {border:1px solid rgba(74,222,128,.28);border-radius:999px;background:rgba(15,20,16,.86);box-shadow:0 14px 35px rgba(0,0,0,.28);backdrop-filter:blur(14px);font-weight:600;padding:.75rem 1rem}
+.float-chip .dot {box-shadow:0 0 12px rgba(74,222,128,.65)}
+.section {padding:clamp(5rem,9vw,8.5rem) 0}.section-border{border-top:1px solid rgba(230,240,232,.09)}
+.section-dark {background:linear-gradient(180deg,rgba(255,255,255,.012),transparent);border-top:1px solid rgba(230,240,232,.07);border-bottom:1px solid rgba(230,240,232,.05)}
+.eyebrow {color:#4ADE80;font-size:.72rem;letter-spacing:.15em;font-weight:700;text-transform:uppercase}
+.section-header {max-width:54rem;margin-bottom:3rem}
+.section-title,.cta-title {font-family:'Space Grotesk','Inter',sans-serif;font-size:clamp(2.3rem,5.2vw,5.1rem);line-height:.98;letter-spacing:-.07em;font-weight:700;text-transform:none;text-wrap:balance}
+.section-description {max-width:42rem;color:#A7B0A9;font-size:1rem;line-height:1.8}
+.text-primary {background:linear-gradient(100deg,#F5F7F4,#4ADE80 80%);-webkit-background-clip:text;background-clip:text}
+.feature-card,.workout-card,.step,.data-item,.preview-card,.print-item {border:1px solid rgba(230,240,232,.1);border-radius:1.2rem;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));box-shadow:0 10px 35px rgba(0,0,0,.12);transition:transform .5s var(--ease-premium),border-color .35s,box-shadow .35s}
+.feature-card{position:relative;overflow:hidden}.feature-card::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(22,163,74,.12),transparent 70%);transition:opacity .35s}
+.feature-card:hover::before{opacity:1}
+.feature-card:hover,.workout-card:hover,.step:hover,.print-item:hover{transform:translateY(-7px);border-color:rgba(74,222,128,.36);box-shadow:0 22px 55px rgba(0,0,0,.28),0 0 35px rgba(22,163,74,.06)}
+.feature-icon,.step-icon,.data-item-icon{border-radius:12px;border:1px solid rgba(74,222,128,.22);background:rgba(22,163,74,.08);color:#4ADE80}
+.cta-box{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,rgba(22,163,74,.13),transparent 65%),#0D100E;border:1px solid rgba(230,240,232,.12);border-radius:1.4rem;padding:clamp(2.5rem,7vw,5.5rem);box-shadow:0 28px 80px rgba(0,0,0,.22)}
+.cta-title{max-width:14ch;margin-inline:auto}.cta-description{color:#A7B0A9;max-width:42rem}
+.footer{background:#080A09;border-top:1px solid rgba(230,240,232,.1);padding:3.5rem 0 2.5rem}
+.back-to-top{border:1px solid rgba(74,222,128,.3);border-radius:50%;background:#16A34A;box-shadow:0 8px 24px rgba(22,163,74,.22)}
+.reveal{opacity:0;transform:translateY(36px) scale(.985);transition:opacity .8s var(--ease-premium),transform .8s var(--ease-premium)}
+.reveal.is-visible,.reveal.visible{opacity:1;transform:translateY(0) scale(1)}
+.arno-scroll-progress{position:fixed;inset:0 auto auto 0;width:100%;height:2px;z-index:1000;transform-origin:left center;transform:scaleX(0);background:linear-gradient(90deg,#16A34A,#4ADE80);box-shadow:0 0 14px rgba(74,222,128,.5);pointer-events:none}
+.arno-cursor{position:fixed;left:0;top:0;z-index:999;pointer-events:none;width:9px;height:9px;border-radius:50%;background:#4ADE80;transform:translate(-50%,-50%);opacity:0;box-shadow:0 0 16px rgba(74,222,128,.6)}
+.arno-cursor-ring{position:fixed;left:0;top:0;z-index:998;pointer-events:none;width:34px;height:34px;border:1px solid rgba(74,222,128,.6);border-radius:50%;transform:translate(-50%,-50%);opacity:0;transition:width .25s,height .25s,border-color .25s,opacity .2s}
+.arno-cursor.is-visible,.arno-cursor-ring.is-visible{opacity:1}.arno-cursor-ring.is-hovering{width:52px;height:52px;border-color:rgba(74,222,128,.95);background:rgba(22,163,74,.06)}
+@keyframes arno-title-reveal{0%{opacity:0;transform:translateY(115%);clip-path:inset(0 0 100% 0)}100%{opacity:1;transform:translateY(0);clip-path:inset(0)}}
+@keyframes arno-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes arno-phone-float{0%,100%{transform:translate3d(0,0,0) rotateY(-5deg) rotateZ(-1deg)}50%{transform:translate3d(0,-14px,0) rotateY(3deg) rotateZ(1deg)}}
+@media(max-width:1023px){.hero{min-height:auto;padding:8.5rem 0 4.5rem}.hero-grid{grid-template-columns:1fr}.hero-content{text-align:left}.hero-title{font-size:clamp(3.15rem,11.5vw,6.5rem)}.hero-visual{min-height:28rem;margin-top:1.5rem}.hero .stats{margin-top:2.5rem}}
+@media(max-width:639px){.hero{padding:7.6rem 0 3.5rem}.hero-title{font-size:clamp(2.7rem,12.3vw,4.7rem);letter-spacing:-.075em}.hero-description{font-size:.98rem;line-height:1.75}.hero-buttons{align-items:stretch;flex-direction:column;width:100%}.hero-buttons .btn{width:100%}.hero .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem}.hero-visual{min-height:25rem}.section{padding:4.5rem 0}.section-title,.cta-title{font-size:clamp(2.3rem,10vw,3.7rem)}.arno-cursor,.arno-cursor-ring{display:none}}
+@media(prefers-reduced-motion:reduce){body::before{display:none}.hero-title-line{opacity:1;transform:none;clip-path:none;animation:none}.hero-description,.hero-buttons,.hero .stats,.hero-content .badge{animation:none;opacity:1;transform:none}.arno-cursor,.arno-cursor-ring,.arno-scroll-progress{display:none}}
